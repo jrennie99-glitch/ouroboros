@@ -1,6 +1,6 @@
 {
-  "ts": "2026-03-24T12:43:57.173215+00:00",
-  "reason": "main_loop",
+  "ts": "2026-03-24T12:52:40.287841+00:00",
+  "reason": "startup",
   "pending_count": 0,
   "running_count": 0,
   "pending": [],
