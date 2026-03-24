@@ -56,14 +56,22 @@ def git_capture(cmd: List[str]) -> Tuple[int, str, str]:
 def ensure_repo_present() -> None:
     if not (REPO_DIR / ".git").exists():
         subprocess.run(["rm", "-rf", str(REPO_DIR)], check=False)
-        subprocess.run(["git", "clone", REMOTE_URL, str(REPO_DIR)], check=True)
-    else:
-        subprocess.run(["git", "remote", "set-url", "origin", REMOTE_URL],
-                        cwd=str(REPO_DIR), check=True)
+        try:
+            subprocess.run(["git", "clone", REMOTE_URL, str(REPO_DIR)], check=True)
+        except Exception:
+            # If clone fails (no token, etc), init a bare repo
+            subprocess.run(["git", "init", str(REPO_DIR)], check=True)
+    # Set or add origin remote (graceful)
+    rc = subprocess.run(["git", "remote", "set-url", "origin", REMOTE_URL],
+                        cwd=str(REPO_DIR), capture_output=True).returncode
+    if rc != 0:
+        subprocess.run(["git", "remote", "add", "origin", REMOTE_URL],
+                        cwd=str(REPO_DIR), capture_output=True)
     subprocess.run(["git", "config", "user.name", "Ouroboros"], cwd=str(REPO_DIR), check=True)
     subprocess.run(["git", "config", "user.email", "ouroboros@users.noreply.github.com"],
                     cwd=str(REPO_DIR), check=True)
-    subprocess.run(["git", "fetch", "origin"], cwd=str(REPO_DIR), check=True)
+    # Fetch is optional — may fail without token for private repos
+    subprocess.run(["git", "fetch", "origin"], cwd=str(REPO_DIR), capture_output=True)
 
 
 # ---------------------------------------------------------------------------

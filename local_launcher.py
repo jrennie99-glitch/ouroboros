@@ -180,7 +180,7 @@ def _parse_int_cfg(raw: Optional[str], default: int, minimum: int = 0) -> int:
 OPENROUTER_API_KEY = get_secret("OPENROUTER_API_KEY", required=True)
 TELEGRAM_BOT_TOKEN = get_secret("TELEGRAM_BOT_TOKEN", required=True)
 TOTAL_BUDGET_DEFAULT = get_secret("TOTAL_BUDGET", required=True)
-GITHUB_TOKEN = get_secret("GITHUB_TOKEN", required=True)
+GITHUB_TOKEN = get_secret("GITHUB_TOKEN", required=False) or ""
 
 import re
 _raw_budget = str(TOTAL_BUDGET_DEFAULT or "")
@@ -255,7 +255,10 @@ if not CHAT_LOG_PATH.exists():
 # ----------------------------
 BRANCH_DEV = "ouroboros"
 BRANCH_STABLE = "ouroboros-stable"
-REMOTE_URL = f"https://{GITHUB_TOKEN}:x-oauth-basic@github.com/{GITHUB_USER}/{GITHUB_REPO}.git"
+if GITHUB_TOKEN:
+    REMOTE_URL = f"https://{GITHUB_TOKEN}:x-oauth-basic@github.com/{GITHUB_USER}/{GITHUB_REPO}.git"
+else:
+    REMOTE_URL = f"https://github.com/{GITHUB_USER}/{GITHUB_REPO}.git"
 
 # ----------------------------
 # 4) Initialize supervisor modules
