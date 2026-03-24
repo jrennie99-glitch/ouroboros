@@ -14,7 +14,7 @@ from typing import Any, Dict, List, Optional, Tuple
 
 log = logging.getLogger(__name__)
 
-DEFAULT_LIGHT_MODEL = "nvidia/nemotron-3-super-120b-a12b:free"
+DEFAULT_LIGHT_MODEL = "qwen/qwen3-235b-a22b:free"
 
 # Free fallback models for rate limit auto-switching (ordered by size/quality)
 FREE_FALLBACK_MODELS = [
