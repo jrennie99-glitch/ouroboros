@@ -14,7 +14,7 @@ from typing import Any, Dict, List, Optional, Tuple
 
 log = logging.getLogger(__name__)
 
-DEFAULT_LIGHT_MODEL = "google/gemini-3-pro-preview"
+DEFAULT_LIGHT_MODEL = "anthropic/claude-sonnet-4"
 
 # Free fallback models for rate limit auto-switching
 FREE_FALLBACK_MODELS = [
