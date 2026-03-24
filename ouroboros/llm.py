@@ -145,6 +145,7 @@ class LLMClient:
             self._client = OpenAI(
                 base_url=self._base_url,
                 api_key=self._api_key,
+                max_retries=0,  # We handle retries ourselves via fallback chain
                 default_headers={
                     "HTTP-Referer": "https://colab.research.google.com/",
                     "X-Title": "Ouroboros",
@@ -218,11 +219,13 @@ class LLMClient:
             kwargs["tools"] = tools_with_cache
             kwargs["tool_choice"] = tool_choice
 
-        # Rate limit auto-fallback: try main model, fall back to free models on 429
+        # Rate limit auto-fallback: try main model, then ALL free models on 429/404
         original_model = kwargs["model"]
         models_to_try = [original_model]
-        if ":free" not in original_model:
-            models_to_try.extend(FREE_FALLBACK_MODELS)
+        # Always add all free fallbacks (skip duplicates)
+        for fm in FREE_FALLBACK_MODELS:
+            if fm != original_model:
+                models_to_try.append(fm)
 
         last_error = None
         for try_model in models_to_try:
@@ -234,8 +237,8 @@ class LLMClient:
                 break
             except Exception as e:
                 err_str = str(e)
-                if "429" in err_str or "rate" in err_str.lower():
-                    log.warning(f"Rate limited on {try_model}, trying next fallback...")
+                if "429" in err_str or "rate" in err_str.lower() or "404" in err_str or "not found" in err_str.lower():
+                    log.warning(f"Rate limited/unavailable on {try_model}, trying next...")
                     last_error = e
                     continue
                 raise
