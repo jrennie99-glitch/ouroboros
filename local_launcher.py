@@ -194,9 +194,9 @@ GITHUB_REPO = get_cfg("GITHUB_REPO", default="ouroboros")
 assert GITHUB_USER and str(GITHUB_USER).strip(), "GITHUB_USER not set. Add it to .env file."
 assert GITHUB_REPO and str(GITHUB_REPO).strip(), "GITHUB_REPO not set. Add it to .env file."
 MAX_WORKERS = int(get_cfg("OUROBOROS_MAX_WORKERS", default="2") or "2")
-MODEL_MAIN = get_cfg("OUROBOROS_MODEL", default="qwen3.5:9b")
-MODEL_CODE = get_cfg("OUROBOROS_MODEL_CODE", default="qwen2.5-coder:7b")
-MODEL_LIGHT = get_cfg("OUROBOROS_MODEL_LIGHT", default="qwen3.5:4b-fast")
+MODEL_MAIN = get_cfg("OUROBOROS_MODEL", default="anthropic/claude-sonnet-4")
+MODEL_CODE = get_cfg("OUROBOROS_MODEL_CODE", default="anthropic/claude-sonnet-4")
+MODEL_LIGHT = get_cfg("OUROBOROS_MODEL_LIGHT", default="anthropic/claude-sonnet-4")
 
 BUDGET_REPORT_EVERY_MESSAGES = 10
 SOFT_TIMEOUT_SEC = max(60, int(get_cfg("OUROBOROS_SOFT_TIMEOUT_SEC", default="600") or "600"))
