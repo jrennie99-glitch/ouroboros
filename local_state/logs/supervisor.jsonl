@@ -54,3 +54,5 @@
 {"ts": "2026-03-24T18:59:14.178118+00:00", "type": "deps_sync_ok", "reason": "bootstrap", "source": "requirements:/content/ouroboros_repo/requirements.txt"}
 {"ts": "2026-03-24T18:59:14.324311+00:00", "type": "worker_spawn_start", "start_method": "fork", "count": 2}
 {"ts": "2026-03-24T18:59:14.344902+00:00", "type": "launcher_start", "branch": "ouroboros", "sha": "c072c384d3087994588f43c40c965f80964567f0", "max_workers": 2, "model_default": "meta-llama/llama-3.3-70b-instruct:free", "model_code": "meta-llama/llama-3.3-70b-instruct:free", "model_light": "meta-llama/llama-3.3-70b-instruct:free", "soft_timeout_sec": 600, "hard_timeout_sec": 1800, "diag_heartbeat_sec": 30, "diag_slow_cycle_sec": 20}
+{"ts": "2026-03-24T18:59:14.913117+00:00", "type": "main_loop_heartbeat", "offset": 658045649, "workers_total": 2, "workers_alive": 2, "pending_count": 0, "running_count": 0, "event_q_size": 0, "running_task_ids": [], "spent_usd": 0.0}
+{"ts": "2026-03-24T18:59:15.089122+00:00", "type": "worker_sha_verify", "ok": true, "expected_sha": "c072c384d3087994588f43c40c965f80964567f0", "observed_sha": "c072c384d3087994588f43c40c965f80964567f0", "worker_pid": 4097}
