@@ -736,7 +736,7 @@ while True:
                 _voice_reply = _is_voice_msg
                 def _run_task_and_resume(cid, txt, img, voice_reply):
                     try:
-                        handle_chat_direct(cid, txt, img, reply_as_voice=voice_reply)
+                        handle_chat_direct(cid, txt, img)
                     finally:
                         _consciousness.resume()
                 _t = threading.Thread(
