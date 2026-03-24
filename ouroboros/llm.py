@@ -16,6 +16,14 @@ log = logging.getLogger(__name__)
 
 DEFAULT_LIGHT_MODEL = "google/gemini-3-pro-preview"
 
+# Free fallback models for rate limit auto-switching
+FREE_FALLBACK_MODELS = [
+    "meta-llama/llama-3.3-70b-instruct:free",
+    "qwen/qwen3-235b-a22b:free",
+    "google/gemma-3-27b-it:free",
+    "mistralai/mistral-small-3.1-24b-instruct:free",
+]
+
 
 def normalize_reasoning_effort(value: str, default: str = "medium") -> str:
     allowed = {"none", "minimal", "low", "medium", "high", "xhigh"}
@@ -193,7 +201,30 @@ class LLMClient:
             kwargs["tools"] = tools_with_cache
             kwargs["tool_choice"] = tool_choice
 
-        resp = client.chat.completions.create(**kwargs)
+        # Rate limit auto-fallback: try main model, fall back to free models on 429
+        original_model = kwargs["model"]
+        models_to_try = [original_model]
+        if ":free" not in original_model:
+            models_to_try.extend(FREE_FALLBACK_MODELS)
+
+        last_error = None
+        for try_model in models_to_try:
+            kwargs["model"] = try_model
+            try:
+                resp = client.chat.completions.create(**kwargs)
+                if try_model != original_model:
+                    log.info(f"Rate limit fallback: {original_model} -> {try_model}")
+                break
+            except Exception as e:
+                err_str = str(e)
+                if "429" in err_str or "rate" in err_str.lower():
+                    log.warning(f"Rate limited on {try_model}, trying next fallback...")
+                    last_error = e
+                    continue
+                raise
+        else:
+            raise last_error or RuntimeError("All models rate limited")
+
         resp_dict = resp.model_dump()
         usage = resp_dict.get("usage") or {}
         choices = resp_dict.get("choices") or [{}]

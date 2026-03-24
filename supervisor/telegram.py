@@ -106,6 +106,48 @@ class TelegramClient:
             log.debug("Failed to send chat action to chat_id=%d", chat_id, exc_info=True)
             return False
 
+    def get_file(self, file_id: str) -> Optional[bytes]:
+        """Download a file from Telegram by file_id."""
+        try:
+            r = requests.get(f"{self.base}/getFile", params={"file_id": file_id}, timeout=10)
+            r.raise_for_status()
+            data = r.json()
+            if data.get("ok"):
+                file_path = data["result"]["file_path"]
+                file_url = f"https://api.telegram.org/file/bot{self._token}/{file_path}"
+                r2 = requests.get(file_url, timeout=30)
+                r2.raise_for_status()
+                return r2.content
+        except Exception as e:
+            log.warning(f"Failed to download file {file_id}: {e}")
+        return None
+
+    def send_voice(self, chat_id: int, voice_bytes: bytes,
+                   caption: str = "") -> Tuple[bool, str]:
+        """Send a voice message (OGG/Opus) to a chat."""
+        last_err = "unknown"
+        for attempt in range(3):
+            try:
+                files = {"voice": ("voice.ogg", voice_bytes, "audio/ogg")}
+                data: Dict[str, Any] = {"chat_id": chat_id}
+                if caption:
+                    data["caption"] = caption[:1024]
+                r = requests.post(
+                    f"{self.base}/sendVoice",
+                    data=data, files=files, timeout=60,
+                )
+                r.raise_for_status()
+                resp = r.json()
+                if resp.get("ok") is True:
+                    return True, "ok"
+                last_err = f"telegram_api_error: {resp}"
+            except Exception as e:
+                last_err = repr(e)
+            if attempt < 2:
+                import time
+                time.sleep(0.8 * (attempt + 1))
+        return False, last_err
+
     def send_photo(self, chat_id: int, photo_bytes: bytes,
                    caption: str = "") -> Tuple[bool, str]:
         """Send a photo to a chat. photo_bytes is raw PNG/JPEG data."""
