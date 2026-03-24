@@ -39,7 +39,7 @@ log = logging.getLogger(__name__)
 class BackgroundConsciousness:
     """Persistent background thinking loop for Ouroboros."""
 
-    _MAX_BG_ROUNDS = 5
+    _MAX_BG_ROUNDS = 2
 
     def __init__(
         self,
@@ -386,7 +386,7 @@ class BackgroundConsciousness:
 
         # Register consciousness-specific tool (modifies self._next_wakeup_sec)
         def _set_next_wakeup(ctx: Any, seconds: int = 300) -> str:
-            self._next_wakeup_sec = max(60, min(3600, int(seconds)))
+            self._next_wakeup_sec = max(300, min(3600, int(seconds)))
             return f"OK: next wakeup in {self._next_wakeup_sec}s"
 
         registry.register(ToolEntry("set_next_wakeup", {
