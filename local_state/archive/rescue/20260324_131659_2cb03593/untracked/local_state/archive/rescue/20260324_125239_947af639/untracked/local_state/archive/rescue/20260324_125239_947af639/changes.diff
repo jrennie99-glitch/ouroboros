@@ -1,0 +1,156 @@
+diff --git a/local_state/logs/chat.jsonl b/local_state/logs/chat.jsonl
+index 29bc666..f4f5001 100644
+--- a/local_state/logs/chat.jsonl
++++ b/local_state/logs/chat.jsonl
+@@ -1,2 +1,3 @@
+ {"ts": "2026-03-24T12:33:10.915314+00:00", "session_id": "373a82a6ae2f4b36b42e8f4efb014519", "direction": "in", "chat_id": 1262547540, "user_id": 1262547540, "text": "Gave you my website to check and you gave some nonsense you’re not the same as you was before I don’t know what went wrong"}
+ {"ts": "2026-03-24T12:33:10.917322+00:00", "session_id": "373a82a6ae2f4b36b42e8f4efb014519", "direction": "out", "chat_id": 1262547540, "user_id": 1262547540, "text": "Owner registered. Ouroboros online."}
++{"ts": "2026-03-24T12:49:38.778416+00:00", "session_id": "373a82a6ae2f4b36b42e8f4efb014519", "direction": "in", "chat_id": 1262547540, "user_id": 1262547540, "text": "Hey"}
+diff --git a/local_state/logs/events.jsonl b/local_state/logs/events.jsonl
+index 0607e6c..1f9780d 100644
+--- a/local_state/logs/events.jsonl
++++ b/local_state/logs/events.jsonl
+@@ -2,3 +2,10 @@
+ {"ts": "2026-03-24T12:33:40.550777+00:00", "type": "startup_verification", "checks": {"uncommitted_changes": {"status": "warning", "files": ["M local_state/logs/chat.jsonl", "M local_state/logs/supervisor.jsonl", "M local_state/state/state.json", "M local_state/state/state.last_good.json", "?? local_state/archive/rescue/20260324_123309_86c29dcb/", "?? local_state/logs/events.jsonl", "?? local_state/state/queue_snapshot.json"], "auto_committed": false}, "version_sync": {"version_file": "6.2.0", "pyproject_version": "6.2.0", "readme_version": "6.2.0", "status": "warning", "message": "no_tags"}, "budget": {"status": "unconfigured"}}, "issues_count": 1, "git_sha": "b7af646a76a6922d170829d2b09a76febb8a9b79"}
+ {"ts": "2026-03-24T12:43:58.473739+00:00", "type": "worker_boot", "pid": 25328, "git_branch": "ouroboros", "git_sha": "7e50e07820954c03d592b1f266c05a5ab11868c0"}
+ {"ts": "2026-03-24T12:46:12.700398+00:00", "type": "worker_boot", "pid": 25577, "git_branch": "ouroboros", "git_sha": "f94e652ccbc30bbe1c57bce65de6266db48fd34f"}
++{"ts": "2026-03-24T12:46:13.772937+00:00", "type": "startup_verification", "checks": {"uncommitted_changes": {"status": "warning", "files": ["M local_state/logs/events.jsonl", "M local_state/logs/supervisor.jsonl", "M local_state/state/queue_snapshot.json", "M local_state/state/state.json", "M local_state/state/state.last_good.json", "?? local_state/archive/rescue/20260324_123643_b6ccca64/", "?? local_state/archive/rescue/20260324_124231_46c7d792/", "?? local_state/archive/rescue/20260324_124327_7a605041/", "?? local_state/archive/rescue/20260324_124542_923835e7/"], "auto_committed": false}, "version_sync": {"version_file": "6.2.0", "pyproject_version": "6.2.0", "readme_version": "6.2.0", "status": "warning", "message": "no_tags"}, "budget": {"status": "unconfigured"}}, "issues_count": 1, "git_sha": "f94e652ccbc30bbe1c57bce65de6266db48fd34f"}
++{"ts": "2026-03-24T12:49:54.716600+00:00", "type": "llm_usage", "task_id": "", "category": "consciousness", "model": "", "cost": 0.0245925, "prompt_tokens": 5758, "completion_tokens": 402}
++{"ts": "2026-03-24T12:49:56.477915+00:00", "type": "llm_usage", "task_id": "", "category": "consciousness", "model": "", "cost": 0.0141894, "prompt_tokens": 6011, "completion_tokens": 53}
++{"ts": "2026-03-24T12:49:58.339949+00:00", "type": "llm_usage", "task_id": "", "category": "consciousness", "model": "", "cost": 0.0146814, "prompt_tokens": 6165, "completion_tokens": 55}
++{"ts": "2026-03-24T12:50:03.651847+00:00", "type": "llm_usage", "task_id": "", "category": "consciousness", "model": "", "cost": 0.0158664, "prompt_tokens": 6260, "completion_tokens": 115}
++{"ts": "2026-03-24T12:50:07.043535+00:00", "type": "consciousness_thought", "thought_preview": "", "cost_usd": 0.0854241, "rounds": 5, "model": "anthropic/claude-sonnet-4"}
++{"ts": "2026-03-24T12:50:07.038654+00:00", "type": "llm_usage", "task_id": "", "category": "consciousness", "model": "", "cost": 0.0160944, "prompt_tokens": 6431, "completion_tokens": 96}
+diff --git a/local_state/logs/supervisor.jsonl b/local_state/logs/supervisor.jsonl
+index 67ff348..c9be63a 100644
+--- a/local_state/logs/supervisor.jsonl
++++ b/local_state/logs/supervisor.jsonl
+@@ -22,3 +22,29 @@
+ {"ts": "2026-03-24T12:45:42.645031+00:00", "type": "worker_spawn_start", "start_method": "spawn", "count": 2}
+ {"ts": "2026-03-24T12:45:42.648853+00:00", "type": "launcher_start", "branch": "ouroboros", "sha": "f94e652ccbc30bbe1c57bce65de6266db48fd34f", "max_workers": 2, "model_default": "anthropic/claude-sonnet-4", "model_code": "anthropic/claude-sonnet-4", "model_light": "anthropic/claude-sonnet-4", "soft_timeout_sec": 600, "hard_timeout_sec": 1800, "diag_heartbeat_sec": 30, "diag_slow_cycle_sec": 20}
+ {"ts": "2026-03-24T12:45:43.865922+00:00", "type": "main_loop_heartbeat", "offset": 658045649, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0}
++{"ts": "2026-03-24T12:46:12.882923+00:00", "type": "worker_sha_verify", "ok": true, "expected_sha": "f94e652ccbc30bbe1c57bce65de6266db48fd34f", "observed_sha": "f94e652ccbc30bbe1c57bce65de6266db48fd34f", "worker_pid": 25577}
++{"ts": "2026-03-24T12:46:14.793422+00:00", "type": "main_loop_heartbeat", "offset": 658045649, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0}
++{"ts": "2026-03-24T12:46:46.725288+00:00", "type": "main_loop_heartbeat", "offset": 658045649, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0}
++{"ts": "2026-03-24T12:47:13.672984+00:00", "type": "worker_dead_detected", "worker_id": 0, "exitcode": 0, "busy_task_id": null}
++{"ts": "2026-03-24T12:47:13.679351+00:00", "type": "worker_dead_detected", "worker_id": 1, "exitcode": 0, "busy_task_id": null}
++{"ts": "2026-03-24T12:47:19.001566+00:00", "type": "main_loop_heartbeat", "offset": 658045649, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0}
++{"ts": "2026-03-24T12:47:51.022176+00:00", "type": "main_loop_heartbeat", "offset": 658045649, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0}
++{"ts": "2026-03-24T12:48:24.086661+00:00", "type": "main_loop_heartbeat", "offset": 658045649, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0}
++{"ts": "2026-03-24T12:48:45.738421+00:00", "type": "worker_dead_detected", "worker_id": 0, "exitcode": 0, "busy_task_id": null}
++{"ts": "2026-03-24T12:48:45.743736+00:00", "type": "worker_dead_detected", "worker_id": 1, "exitcode": 0, "busy_task_id": null}
++{"ts": "2026-03-24T12:48:56.590470+00:00", "type": "main_loop_heartbeat", "offset": 658045649, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0}
++{"ts": "2026-03-24T12:49:29.476720+00:00", "type": "main_loop_heartbeat", "offset": 658045649, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0}
++{"ts": "2026-03-24T12:49:59.772389+00:00", "type": "main_loop_heartbeat", "offset": 658045652, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0780558}
++{"ts": "2026-03-24T12:50:16.258871+00:00", "type": "worker_dead_detected", "worker_id": 0, "exitcode": 0, "busy_task_id": null}
++{"ts": "2026-03-24T12:50:16.269325+00:00", "type": "worker_dead_detected", "worker_id": 1, "exitcode": 0, "busy_task_id": null}
++{"ts": "2026-03-24T12:50:32.642674+00:00", "type": "main_loop_heartbeat", "offset": 658045652, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.1708482}
++{"ts": "2026-03-24T12:51:04.591636+00:00", "type": "main_loop_heartbeat", "offset": 658045652, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.1708482}
++{"ts": "2026-03-24T12:51:26.408087+00:00", "type": "telegram_poll_error", "offset": 658045652, "error": "RuntimeError(\"Telegram getUpdates failed after retries: HTTPError('401 Client Error: Unauthorized for url: https://api.telegram.org/bot8724402007:AAE6a84JBozh-YI0PHV6KZc9Y49yplvU2QA/getUpdates?offset=658045652&timeout=0&allowed_updates=message&allowed_updates=edited_message')\")"}
++{"ts": "2026-03-24T12:51:33.567464+00:00", "type": "telegram_poll_error", "offset": 658045652, "error": "RuntimeError(\"Telegram getUpdates failed after retries: HTTPError('401 Client Error: Unauthorized for url: https://api.telegram.org/bot8724402007:AAE6a84JBozh-YI0PHV6KZc9Y49yplvU2QA/getUpdates?offset=658045652&timeout=0&allowed_updates=message&allowed_updates=edited_message')\")"}
++{"ts": "2026-03-24T12:51:40.886404+00:00", "type": "telegram_poll_error", "offset": 658045652, "error": "RuntimeError(\"Telegram getUpdates failed after retries: HTTPError('401 Client Error: Unauthorized for url: https://api.telegram.org/bot8724402007:AAE6a84JBozh-YI0PHV6KZc9Y49yplvU2QA/getUpdates?offset=658045652&timeout=0&allowed_updates=message&allowed_updates=edited_message')\")"}
++{"ts": "2026-03-24T12:51:47.890251+00:00", "type": "telegram_poll_error", "offset": 658045652, "error": "RuntimeError(\"Telegram getUpdates failed after retries: HTTPError('401 Client Error: Unauthorized for url: https://api.telegram.org/bot8724402007:AAE6a84JBozh-YI0PHV6KZc9Y49yplvU2QA/getUpdates?offset=658045652&timeout=0&allowed_updates=message&allowed_updates=edited_message')\")"}
++{"ts": "2026-03-24T12:51:49.396229+00:00", "type": "worker_dead_detected", "worker_id": 0, "exitcode": 0, "busy_task_id": null}
++{"ts": "2026-03-24T12:51:49.403234+00:00", "type": "worker_dead_detected", "worker_id": 1, "exitcode": 0, "busy_task_id": null}
++{"ts": "2026-03-24T12:51:55.068250+00:00", "type": "telegram_poll_error", "offset": 658045652, "error": "RuntimeError(\"Telegram getUpdates failed after retries: HTTPError('401 Client Error: Unauthorized for url: https://api.telegram.org/bot8724402007:AAE6a84JBozh-YI0PHV6KZc9Y49yplvU2QA/getUpdates?offset=658045652&timeout=0&allowed_updates=message&allowed_updates=edited_message')\")"}
++{"ts": "2026-03-24T12:52:01.952300+00:00", "type": "telegram_poll_error", "offset": 658045652, "error": "RuntimeError(\"Telegram getUpdates failed after retries: HTTPError('401 Client Error: Unauthorized for url: https://api.telegram.org/bot8724402007:AAE6a84JBozh-YI0PHV6KZc9Y49yplvU2QA/getUpdates?offset=658045652&timeout=0&allowed_updates=message&allowed_updates=edited_message')\")"}
++{"ts": "2026-03-24T12:52:09.945007+00:00", "type": "telegram_poll_error", "offset": 658045652, "error": "RuntimeError(\"Telegram getUpdates failed after retries: HTTPError('401 Client Error: Unauthorized for url: https://api.telegram.org/bot8724402007:AAE6a84JBozh-YI0PHV6KZc9Y49yplvU2QA/getUpdates?offset=658045652&timeout=0&allowed_updates=message&allowed_updates=edited_message')\")"}
+diff --git a/local_state/state/queue_snapshot.json b/local_state/state/queue_snapshot.json
+index 1b4245f..9d20d75 100644
+--- a/local_state/state/queue_snapshot.json
++++ b/local_state/state/queue_snapshot.json
+@@ -1,5 +1,5 @@
+ {
+-  "ts": "2026-03-24T12:46:10.702935+00:00",
++  "ts": "2026-03-24T12:52:11.455463+00:00",
+   "reason": "main_loop",
+   "pending_count": 0,
+   "running_count": 0,
+diff --git a/local_state/state/state.json b/local_state/state/state.json
+index 4391862..422d1c6 100644
+--- a/local_state/state/state.json
++++ b/local_state/state/state.json
+@@ -2,26 +2,26 @@
+   "created_at": "2026-03-24T12:30:50.401248+00:00",
+   "owner_id": 1262547540,
+   "owner_chat_id": 1262547540,
+-  "tg_offset": 658045649,
+-  "spent_usd": 0.0,
+-  "spent_calls": 0,
+-  "spent_tokens_prompt": 0,
+-  "spent_tokens_completion": 0,
+-  "spent_tokens_cached": 0,
++  "tg_offset": 658045652,
++  "spent_usd": 0.1708482,
++  "spent_calls": 10,
++  "spent_tokens_prompt": 61250,
++  "spent_tokens_completion": 1442,
++  "spent_tokens_cached": 13744,
+   "session_id": "373a82a6ae2f4b36b42e8f4efb014519",
+   "current_branch": "ouroboros",
+   "current_sha": "f94e652ccbc30bbe1c57bce65de6266db48fd34f",
+-  "last_owner_message_at": "2026-03-24T12:33:10.912115+00:00",
++  "last_owner_message_at": "2026-03-24T12:49:38.776864+00:00",
+   "last_evolution_task_at": "",
+   "budget_messages_since_report": 1,
+   "evolution_mode_enabled": false,
+   "evolution_cycle": 0,
+-  "session_total_snapshot": 7.041616125,
+-  "session_spent_snapshot": 0.0,
++  "session_total_snapshot": 7.127040225,
++  "session_spent_snapshot": 0.1708482,
+   "budget_drift_pct": null,
+   "budget_drift_alert": false,
+   "evolution_consecutive_failures": 0,
+-  "openrouter_total_usd": 7.041616125,
+-  "openrouter_daily_usd": 3.13429375,
+-  "openrouter_last_check_at": "2026-03-24T12:31:25.748326+00:00"
++  "openrouter_total_usd": 7.127040225,
++  "openrouter_daily_usd": 3.21971785,
++  "openrouter_last_check_at": "2026-03-24T12:52:37.870257+00:00"
+ }
+\ No newline at end of file
+diff --git a/local_state/state/state.last_good.json b/local_state/state/state.last_good.json
+index 4391862..422d1c6 100644
+--- a/local_state/state/state.last_good.json
++++ b/local_state/state/state.last_good.json
+@@ -2,26 +2,26 @@
+   "created_at": "2026-03-24T12:30:50.401248+00:00",
+   "owner_id": 1262547540,
+   "owner_chat_id": 1262547540,
+-  "tg_offset": 658045649,
+-  "spent_usd": 0.0,
+-  "spent_calls": 0,
+-  "spent_tokens_prompt": 0,
+-  "spent_tokens_completion": 0,
+-  "spent_tokens_cached": 0,
++  "tg_offset": 658045652,
++  "spent_usd": 0.1708482,
++  "spent_calls": 10,
++  "spent_tokens_prompt": 61250,
++  "spent_tokens_completion": 1442,
++  "spent_tokens_cached": 13744,
+   "session_id": "373a82a6ae2f4b36b42e8f4efb014519",
+   "current_branch": "ouroboros",
+   "current_sha": "f94e652ccbc30bbe1c57bce65de6266db48fd34f",
+-  "last_owner_message_at": "2026-03-24T12:33:10.912115+00:00",
++  "last_owner_message_at": "2026-03-24T12:49:38.776864+00:00",
+   "last_evolution_task_at": "",
+   "budget_messages_since_report": 1,
+   "evolution_mode_enabled": false,
+   "evolution_cycle": 0,
+-  "session_total_snapshot": 7.041616125,
+-  "session_spent_snapshot": 0.0,
++  "session_total_snapshot": 7.127040225,
++  "session_spent_snapshot": 0.1708482,
+   "budget_drift_pct": null,
+   "budget_drift_alert": false,
+   "evolution_consecutive_failures": 0,
+-  "openrouter_total_usd": 7.041616125,
+-  "openrouter_daily_usd": 3.13429375,
+-  "openrouter_last_check_at": "2026-03-24T12:31:25.748326+00:00"
++  "openrouter_total_usd": 7.127040225,
++  "openrouter_daily_usd": 3.21971785,
++  "openrouter_last_check_at": "2026-03-24T12:52:37.870257+00:00"
+ }
+\ No newline at end of file

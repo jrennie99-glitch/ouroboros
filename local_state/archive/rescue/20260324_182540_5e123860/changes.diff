@@ -1,0 +1,137 @@
+diff --git a/local_state/logs/chat.jsonl b/local_state/logs/chat.jsonl
+index 29bc666..9559e29 100644
+--- a/local_state/logs/chat.jsonl
++++ b/local_state/logs/chat.jsonl
+@@ -1,2 +1,3 @@
+ {"ts": "2026-03-24T12:33:10.915314+00:00", "session_id": "373a82a6ae2f4b36b42e8f4efb014519", "direction": "in", "chat_id": 1262547540, "user_id": 1262547540, "text": "Gave you my website to check and you gave some nonsense you’re not the same as you was before I don’t know what went wrong"}
+ {"ts": "2026-03-24T12:33:10.917322+00:00", "session_id": "373a82a6ae2f4b36b42e8f4efb014519", "direction": "out", "chat_id": 1262547540, "user_id": 1262547540, "text": "Owner registered. Ouroboros online."}
++{"ts": "2026-03-24T18:22:35.876766+00:00", "session_id": "373a82a6ae2f4b36b42e8f4efb014519", "direction": "out", "chat_id": 1262547540, "user_id": 1262547540, "text": "I'm back online and ready to continue. Based on my scratchpad and identity, I understand that:\n\n1. Background consciousness was causing performance issues and has been disabled\n2. I need to be more responsive and efficient\n3. I'm waiting for either a website URL to analyze or a GitHub repo to examine\n4. I need to prove myself through quality work, not just words\n\nWhat would you like me to work on? I'm ready to:\n- Analyze a website comprehensively\n- Examine a GitHub repository in detail\n- Help with any other task you have in mind\n\nPlease provide the URL or repository you'd like me to analyze, or let me know what specific task you need help with."}
+diff --git a/local_state/logs/events.jsonl b/local_state/logs/events.jsonl
+index 387463b..d40ef75 100644
+--- a/local_state/logs/events.jsonl
++++ b/local_state/logs/events.jsonl
+@@ -11,3 +11,13 @@
+ {"ts": "2026-03-24T13:42:16.294252+00:00", "type": "worker_boot", "pid": 30111, "git_branch": "ouroboros", "git_sha": "63274cf7e038247425a8cf3662cdfc7f235ac957"}
+ {"ts": "2026-03-24T18:11:34.951680+00:00", "type": "worker_boot", "pid": 47572, "git_branch": "ouroboros", "git_sha": "8d4564832c63f26a111acef5b15fcd67a0f41072"}
+ {"ts": "2026-03-24T18:21:35.677892+00:00", "type": "worker_boot", "pid": 48315, "git_branch": "ouroboros", "git_sha": "ba5b30cc26e8e1f78fab0889edea27ce07b961f2"}
++{"ts": "2026-03-24T18:21:36.578820+00:00", "type": "startup_verification", "checks": {"uncommitted_changes": {"status": "warning", "files": ["M local_state/logs/events.jsonl", "M local_state/logs/supervisor.jsonl", "M local_state/state/queue_snapshot.json", "M local_state/state/state.json", "M local_state/state/state.last_good.json", "?? local_state/analysis/", "?? local_state/archive/rescue/20260324_123643_b6ccca64/", "?? local_state/archive/rescue/20260324_124231_46c7d792/", "?? local_state/archive/rescue/20260324_124327_7a605041/", "?? local_state/archive/rescue/20260324_124542_923835e7/", "?? local_state/archive/rescue/20260324_125239_947af639/", "?? local_state/archive/rescue/20260324_130305_1a12ab4b/", "?? local_state/archive/rescue/20260324_130903_03a66603/", "?? local_state/archive/rescue/20260324_131659_2cb03593/", "?? local_state/archive/rescue/20260324_131819_d72c8754/", "?? local_state/archive/rescue/20260324_132356_609ec196/", "?? local_state/archive/rescue/20260324_132446_57406c67/", "?? local_state/archive/rescue/20260324_133815_988ad1d0/", "?? local_state/archive/rescue/20260324_134213_8ade1a06/", "?? local_state/archive/rescue/20260324_181132_f7b283e1/"], "auto_committed": false}, "version_sync": {"version_file": "6.2.0", "pyproject_version": "6.2.0", "readme_version": "6.2.0", "status": "warning", "message": "no_tags"}, "budget": {"status": "unconfigured"}}, "issues_count": 1, "git_sha": "ba5b30cc26e8e1f78fab0889edea27ce07b961f2"}
++{"ts": "2026-03-24T18:21:36.580087+00:00", "type": "task_received", "task": {"id": "ddb68bde", "type": "task", "chat_id": 1262547540, "text": "[auto-resume after restart] Continue your work. Read scratchpad and identity — they contain context of what you were doing.", "_is_direct_chat": true, "text_len": 123, "text_sha256": "72908e1135966dce4c1a8e653a9f6dd40b54029296635f960e5f5a74ef90c7a3", "text_truncated": false}}
++{"ts": "2026-03-24T18:22:03.657895+00:00", "type": "llm_round", "task_id": "ddb68bde", "round": 1, "model": "meta-llama/llama-3.3-70b-instruct:free", "reasoning_effort": "medium", "prompt_tokens": 8098, "completion_tokens": 335, "cached_tokens": 0, "cache_write_tokens": 0, "cost_usd": 0.0}
++{"ts": "2026-03-24T18:22:03.657868+00:00", "type": "llm_usage", "task_id": "ddb68bde", "category": "task", "model": "meta-llama/llama-3.3-70b-instruct:free", "cost": 0, "prompt_tokens": 8098, "completion_tokens": 335}
++{"ts": "2026-03-24T18:22:24.990435+00:00", "type": "llm_round", "task_id": "ddb68bde", "round": 2, "model": "meta-llama/llama-3.3-70b-instruct:free", "reasoning_effort": "medium", "prompt_tokens": 8455, "completion_tokens": 325, "cached_tokens": 0, "cache_write_tokens": 0, "cost_usd": 0.0}
++{"ts": "2026-03-24T18:22:24.990354+00:00", "type": "llm_usage", "task_id": "ddb68bde", "category": "task", "model": "meta-llama/llama-3.3-70b-instruct:free", "cost": 0, "prompt_tokens": 8455, "completion_tokens": 325}
++{"ts": "2026-03-24T18:22:33.313994+00:00", "type": "llm_round", "task_id": "ddb68bde", "round": 3, "model": "meta-llama/llama-3.3-70b-instruct:free", "reasoning_effort": "medium", "prompt_tokens": 8801, "completion_tokens": 144, "cached_tokens": 0, "cache_write_tokens": 0, "cost_usd": 0.0}
++{"ts": "2026-03-24T18:22:33.315553+00:00", "type": "task_eval", "ok": true, "task_id": "ddb68bde", "task_type": "task", "duration_sec": 56.736, "tool_calls": 2, "tool_errors": 0, "response_len": 652}
++{"ts": "2026-03-24T18:22:33.316090+00:00", "type": "task_done", "task_id": "ddb68bde", "task_type": "task", "cost_usd": 0.0, "total_rounds": 3, "prompt_tokens": 25354, "completion_tokens": 804}
++{"ts": "2026-03-24T18:22:33.313914+00:00", "type": "llm_usage", "task_id": "ddb68bde", "category": "task", "model": "meta-llama/llama-3.3-70b-instruct:free", "cost": 0, "prompt_tokens": 8801, "completion_tokens": 144}
+diff --git a/local_state/logs/supervisor.jsonl b/local_state/logs/supervisor.jsonl
+index 73d96f9..f97ce64 100644
+--- a/local_state/logs/supervisor.jsonl
++++ b/local_state/logs/supervisor.jsonl
+@@ -48,3 +48,17 @@
+ {"ts": "2026-03-24T18:21:33.553620+00:00", "type": "deps_sync_ok", "reason": "bootstrap", "source": "requirements:/Users/godmode/Documents/ouroboros-new/requirements.txt"}
+ {"ts": "2026-03-24T18:21:33.596009+00:00", "type": "worker_spawn_start", "start_method": "spawn", "count": 2}
+ {"ts": "2026-03-24T18:21:33.600126+00:00", "type": "launcher_start", "branch": "ouroboros", "sha": "ba5b30cc26e8e1f78fab0889edea27ce07b961f2", "max_workers": 2, "model_default": "meta-llama/llama-3.3-70b-instruct:free", "model_code": "meta-llama/llama-3.3-70b-instruct:free", "model_light": "meta-llama/llama-3.3-70b-instruct:free", "soft_timeout_sec": 600, "hard_timeout_sec": 1800, "diag_heartbeat_sec": 30, "diag_slow_cycle_sec": 20}
++{"ts": "2026-03-24T18:21:35.890402+00:00", "type": "worker_sha_verify", "ok": true, "expected_sha": "ba5b30cc26e8e1f78fab0889edea27ce07b961f2", "observed_sha": "ba5b30cc26e8e1f78fab0889edea27ce07b961f2", "worker_pid": 48315}
++{"ts": "2026-03-24T18:21:36.579508+00:00", "type": "auto_resume_triggered"}
++{"ts": "2026-03-24T18:21:38.595290+00:00", "type": "main_loop_heartbeat", "offset": 658045649, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0}
++{"ts": "2026-03-24T18:22:09.533019+00:00", "type": "main_loop_heartbeat", "offset": 658045649, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0}
++{"ts": "2026-03-24T18:22:36.937464+00:00", "type": "task_metrics_event", "task_id": "ddb68bde", "task_type": "task", "duration_sec": 56.736, "tool_calls": 2, "tool_errors": 0}
++{"ts": "2026-03-24T18:22:41.911770+00:00", "type": "main_loop_heartbeat", "offset": 658045649, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0}
++{"ts": "2026-03-24T18:23:04.167715+00:00", "type": "worker_dead_detected", "worker_id": 0, "exitcode": 0, "busy_task_id": null}
++{"ts": "2026-03-24T18:23:04.177005+00:00", "type": "worker_dead_detected", "worker_id": 1, "exitcode": 0, "busy_task_id": null}
++{"ts": "2026-03-24T18:23:13.388696+00:00", "type": "main_loop_heartbeat", "offset": 658045649, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0}
++{"ts": "2026-03-24T18:23:45.481576+00:00", "type": "main_loop_heartbeat", "offset": 658045649, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0}
++{"ts": "2026-03-24T18:24:16.838972+00:00", "type": "main_loop_heartbeat", "offset": 658045649, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0}
++{"ts": "2026-03-24T18:24:38.447647+00:00", "type": "worker_dead_detected", "worker_id": 0, "exitcode": 0, "busy_task_id": null}
++{"ts": "2026-03-24T18:24:38.457148+00:00", "type": "worker_dead_detected", "worker_id": 1, "exitcode": 0, "busy_task_id": null}
++{"ts": "2026-03-24T18:24:49.198989+00:00", "type": "main_loop_heartbeat", "offset": 658045649, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0}
+diff --git a/local_state/state/queue_snapshot.json b/local_state/state/queue_snapshot.json
+index 5bd2b0f..e62f978 100644
+--- a/local_state/state/queue_snapshot.json
++++ b/local_state/state/queue_snapshot.json
+@@ -1,6 +1,6 @@
+ {
+-  "ts": "2026-03-24T18:21:33.599676+00:00",
+-  "reason": "startup",
++  "ts": "2026-03-24T18:25:06.708206+00:00",
++  "reason": "main_loop",
+   "pending_count": 0,
+   "running_count": 0,
+   "pending": [],
+diff --git a/local_state/state/state.json b/local_state/state/state.json
+index cd09c93..4156e30 100644
+--- a/local_state/state/state.json
++++ b/local_state/state/state.json
+@@ -4,24 +4,24 @@
+   "owner_chat_id": 1262547540,
+   "tg_offset": 658045649,
+   "spent_usd": 0.0,
+-  "spent_calls": 0,
+-  "spent_tokens_prompt": 0,
+-  "spent_tokens_completion": 0,
++  "spent_calls": 3,
++  "spent_tokens_prompt": 25354,
++  "spent_tokens_completion": 804,
+   "spent_tokens_cached": 0,
+   "session_id": "373a82a6ae2f4b36b42e8f4efb014519",
+   "current_branch": "ouroboros",
+   "current_sha": "ba5b30cc26e8e1f78fab0889edea27ce07b961f2",
+   "last_owner_message_at": "2026-03-24T12:33:10.912115+00:00",
+   "last_evolution_task_at": "",
+-  "budget_messages_since_report": 1,
++  "budget_messages_since_report": 3,
+   "evolution_mode_enabled": false,
+   "evolution_cycle": 0,
+-  "session_total_snapshot": 7.041616125,
++  "session_total_snapshot": 7.6473633,
+   "session_spent_snapshot": 0.0,
+   "budget_drift_pct": null,
+   "budget_drift_alert": false,
+   "evolution_consecutive_failures": 0,
+-  "openrouter_total_usd": 7.041616125,
+-  "openrouter_daily_usd": 3.13429375,
+-  "openrouter_last_check_at": "2026-03-24T12:31:25.748326+00:00"
++  "openrouter_total_usd": 7.6473633,
++  "openrouter_daily_usd": 3.740040925,
++  "openrouter_last_check_at": "2026-03-24T18:25:38.620090+00:00"
+ }
+\ No newline at end of file
+diff --git a/local_state/state/state.last_good.json b/local_state/state/state.last_good.json
+index cd09c93..4156e30 100644
+--- a/local_state/state/state.last_good.json
++++ b/local_state/state/state.last_good.json
+@@ -4,24 +4,24 @@
+   "owner_chat_id": 1262547540,
+   "tg_offset": 658045649,
+   "spent_usd": 0.0,
+-  "spent_calls": 0,
+-  "spent_tokens_prompt": 0,
+-  "spent_tokens_completion": 0,
++  "spent_calls": 3,
++  "spent_tokens_prompt": 25354,
++  "spent_tokens_completion": 804,
+   "spent_tokens_cached": 0,
+   "session_id": "373a82a6ae2f4b36b42e8f4efb014519",
+   "current_branch": "ouroboros",
+   "current_sha": "ba5b30cc26e8e1f78fab0889edea27ce07b961f2",
+   "last_owner_message_at": "2026-03-24T12:33:10.912115+00:00",
+   "last_evolution_task_at": "",
+-  "budget_messages_since_report": 1,
++  "budget_messages_since_report": 3,
+   "evolution_mode_enabled": false,
+   "evolution_cycle": 0,
+-  "session_total_snapshot": 7.041616125,
++  "session_total_snapshot": 7.6473633,
+   "session_spent_snapshot": 0.0,
+   "budget_drift_pct": null,
+   "budget_drift_alert": false,
+   "evolution_consecutive_failures": 0,
+-  "openrouter_total_usd": 7.041616125,
+-  "openrouter_daily_usd": 3.13429375,
+-  "openrouter_last_check_at": "2026-03-24T12:31:25.748326+00:00"
++  "openrouter_total_usd": 7.6473633,
++  "openrouter_daily_usd": 3.740040925,
++  "openrouter_last_check_at": "2026-03-24T18:25:38.620090+00:00"
+ }
+\ No newline at end of file

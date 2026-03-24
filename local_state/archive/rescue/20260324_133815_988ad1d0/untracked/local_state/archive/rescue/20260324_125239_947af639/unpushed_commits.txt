@@ -1,0 +1,1 @@
+d21b294 auto-rescue: uncommitted changes detected on startup

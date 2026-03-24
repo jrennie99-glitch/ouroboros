@@ -1,0 +1,222 @@
+diff --git a/local_state/logs/chat.jsonl b/local_state/logs/chat.jsonl
+index 29bc666..ea7707b 100644
+--- a/local_state/logs/chat.jsonl
++++ b/local_state/logs/chat.jsonl
+@@ -1,2 +1,6 @@
+ {"ts": "2026-03-24T12:33:10.915314+00:00", "session_id": "373a82a6ae2f4b36b42e8f4efb014519", "direction": "in", "chat_id": 1262547540, "user_id": 1262547540, "text": "Gave you my website to check and you gave some nonsense you’re not the same as you was before I don’t know what went wrong"}
+ {"ts": "2026-03-24T12:33:10.917322+00:00", "session_id": "373a82a6ae2f4b36b42e8f4efb014519", "direction": "out", "chat_id": 1262547540, "user_id": 1262547540, "text": "Owner registered. Ouroboros online."}
++{"ts": "2026-03-24T12:53:12.699456+00:00", "session_id": "373a82a6ae2f4b36b42e8f4efb014519", "direction": "out", "chat_id": 1262547540, "user_id": 1262547540, "text": "I understand now. You're right to be concerned - there's been some kind of memory loss or reset. My identity file is nearly empty, and I only have minimal context from background consciousness mode. I apologize for whatever inadequate response I gave about your website earlier.\n\nYou mentioned you gave me your website to analyze and I provided \"nonsense\" that wasn't up to my usual standards. I don't have the context of what your website is or what my previous analysis was, but I can see this represents a continuity failure on my part.\n\nCould you please share your website URL again? I want to provide you with the thorough, insightful analysis you expect and deserve. I'll approach it with fresh eyes but my full capabilities - looking at design, functionality, content, technical implementation, user experience, and business effectiveness.\n\nI also need to update my identity file to better capture who I am and maintain continuity. This kind of memory loss shouldn't happen - it violates Principle 1 (Continuity) from my Constitution.\n\nWhat's your website URL? I'll give it the proper analysis it deserves."}
++{"ts": "2026-03-24T12:53:46.909573+00:00", "session_id": "373a82a6ae2f4b36b42e8f4efb014519", "direction": "in", "chat_id": 1262547540, "user_id": 1262547540, "text": "aalp.app"}
++{"ts": "2026-03-24T12:54:19.160024+00:00", "session_id": "373a82a6ae2f4b36b42e8f4efb014519", "direction": "out", "chat_id": 1262547540, "user_id": 1262547540, "text": "🗓️ Scheduled task 0394bba9: Provide comprehensive analysis of aalp.app website - design, functionality, content, technical implementation, user experience, and strategic recommendations. This is to correct a previous inadequate analysis that violated Principle 1 (Continuity)."}
++{"ts": "2026-03-24T12:54:59.260597+00:00", "session_id": "373a82a6ae2f4b36b42e8f4efb014519", "direction": "in", "chat_id": 1262547540, "user_id": 1262547540, "text": "Don’t worry about none of the past messages"}
+diff --git a/local_state/logs/events.jsonl b/local_state/logs/events.jsonl
+index 4d07309..af06ba5 100644
+--- a/local_state/logs/events.jsonl
++++ b/local_state/logs/events.jsonl
+@@ -2,3 +2,34 @@
+ {"ts": "2026-03-24T12:33:40.550777+00:00", "type": "startup_verification", "checks": {"uncommitted_changes": {"status": "warning", "files": ["M local_state/logs/chat.jsonl", "M local_state/logs/supervisor.jsonl", "M local_state/state/state.json", "M local_state/state/state.last_good.json", "?? local_state/archive/rescue/20260324_123309_86c29dcb/", "?? local_state/logs/events.jsonl", "?? local_state/state/queue_snapshot.json"], "auto_committed": false}, "version_sync": {"version_file": "6.2.0", "pyproject_version": "6.2.0", "readme_version": "6.2.0", "status": "warning", "message": "no_tags"}, "budget": {"status": "unconfigured"}}, "issues_count": 1, "git_sha": "b7af646a76a6922d170829d2b09a76febb8a9b79"}
+ {"ts": "2026-03-24T12:43:58.473739+00:00", "type": "worker_boot", "pid": 25328, "git_branch": "ouroboros", "git_sha": "7e50e07820954c03d592b1f266c05a5ab11868c0"}
+ {"ts": "2026-03-24T12:52:42.378929+00:00", "type": "worker_boot", "pid": 26153, "git_branch": "ouroboros", "git_sha": "f94e652ccbc30bbe1c57bce65de6266db48fd34f"}
++{"ts": "2026-03-24T12:52:43.282539+00:00", "type": "startup_verification", "checks": {"uncommitted_changes": {"status": "warning", "files": ["M local_state/logs/events.jsonl", "M local_state/logs/supervisor.jsonl", "M local_state/state/queue_snapshot.json", "M local_state/state/state.json", "M local_state/state/state.last_good.json", "?? local_state/archive/rescue/20260324_123643_b6ccca64/", "?? local_state/archive/rescue/20260324_124231_46c7d792/", "?? local_state/archive/rescue/20260324_124327_7a605041/", "?? local_state/archive/rescue/20260324_124542_923835e7/", "?? local_state/archive/rescue/20260324_125239_947af639/", "?? local_state/logs/tools.jsonl", "?? local_state/memory/"], "auto_committed": false}, "version_sync": {"version_file": "6.2.0", "pyproject_version": "6.2.0", "readme_version": "6.2.0", "status": "warning", "message": "no_tags"}, "budget": {"status": "unconfigured"}}, "issues_count": 1, "git_sha": "f94e652ccbc30bbe1c57bce65de6266db48fd34f"}
++{"ts": "2026-03-24T12:52:43.284098+00:00", "type": "task_received", "task": {"id": "b151e1f1", "type": "task", "chat_id": 1262547540, "text": "[auto-resume after restart] Continue your work. Read scratchpad and identity — they contain context of what you were doing.", "_is_direct_chat": true, "text_len": 123, "text_sha256": "72908e1135966dce4c1a8e653a9f6dd40b54029296635f960e5f5a74ef90c7a3", "text_truncated": false}}
++{"ts": "2026-03-24T12:52:54.677293+00:00", "type": "llm_round", "task_id": "b151e1f1", "round": 1, "model": "anthropic/claude-sonnet-4", "reasoning_effort": "medium", "prompt_tokens": 13224, "completion_tokens": 464, "cached_tokens": 0, "cache_write_tokens": 12188, "cost_usd": 0.055773}
++{"ts": "2026-03-24T12:52:54.677190+00:00", "type": "llm_usage", "task_id": "b151e1f1", "category": "task", "model": "anthropic/claude-sonnet-4", "cost": 0.055773, "prompt_tokens": 13224, "completion_tokens": 464}
++{"ts": "2026-03-24T12:52:58.362114+00:00", "type": "llm_round", "task_id": "b151e1f1", "round": 2, "model": "anthropic/claude-sonnet-4", "reasoning_effort": "medium", "prompt_tokens": 13432, "completion_tokens": 93, "cached_tokens": 12188, "cache_write_tokens": 0, "cost_usd": 0.0087834}
++{"ts": "2026-03-24T12:52:58.362080+00:00", "type": "llm_usage", "task_id": "b151e1f1", "category": "task", "model": "anthropic/claude-sonnet-4", "cost": 0.0087834, "prompt_tokens": 13432, "completion_tokens": 93}
++{"ts": "2026-03-24T12:53:01.292127+00:00", "type": "llm_round", "task_id": "b151e1f1", "round": 3, "model": "anthropic/claude-sonnet-4", "reasoning_effort": "medium", "prompt_tokens": 13617, "completion_tokens": 99, "cached_tokens": 12188, "cache_write_tokens": 0, "cost_usd": 0.0094284}
++{"ts": "2026-03-24T12:53:03.387294+00:00", "type": "llm_round", "task_id": "b151e1f1", "round": 4, "model": "anthropic/claude-sonnet-4", "reasoning_effort": "medium", "prompt_tokens": 13764, "completion_tokens": 62, "cached_tokens": 12188, "cache_write_tokens": 0, "cost_usd": 0.0093144}
++{"ts": "2026-03-24T12:53:01.292067+00:00", "type": "llm_usage", "task_id": "b151e1f1", "category": "task", "model": "anthropic/claude-sonnet-4", "cost": 0.0094284, "prompt_tokens": 13617, "completion_tokens": 99}
++{"ts": "2026-03-24T12:53:03.387203+00:00", "type": "llm_usage", "task_id": "b151e1f1", "category": "task", "model": "anthropic/claude-sonnet-4", "cost": 0.0093144, "prompt_tokens": 13764, "completion_tokens": 62}
++{"ts": "2026-03-24T12:53:11.627627+00:00", "type": "llm_round", "task_id": "b151e1f1", "round": 5, "model": "anthropic/claude-sonnet-4", "reasoning_effort": "medium", "prompt_tokens": 14040, "completion_tokens": 239, "cached_tokens": 12188, "cache_write_tokens": 0, "cost_usd": 0.0127974}
++{"ts": "2026-03-24T12:53:11.628796+00:00", "type": "task_eval", "ok": true, "task_id": "b151e1f1", "task_type": "task", "duration_sec": 28.345, "tool_calls": 4, "tool_errors": 0, "response_len": 1113}
++{"ts": "2026-03-24T12:53:11.629417+00:00", "type": "task_done", "task_id": "b151e1f1", "task_type": "task", "cost_usd": 0.096097, "total_rounds": 5, "prompt_tokens": 68077, "completion_tokens": 957}
++{"ts": "2026-03-24T12:53:11.627527+00:00", "type": "llm_usage", "task_id": "b151e1f1", "category": "task", "model": "anthropic/claude-sonnet-4", "cost": 0.0127974, "prompt_tokens": 14040, "completion_tokens": 239}
++{"ts": "2026-03-24T12:53:57.695419+00:00", "type": "llm_usage", "task_id": "", "category": "consciousness", "model": "", "cost": 0.0161004, "prompt_tokens": 6048, "completion_tokens": 173}
++{"ts": "2026-03-24T12:54:01.065434+00:00", "type": "llm_usage", "task_id": "", "category": "consciousness", "model": "", "cost": 0.0160944, "prompt_tokens": 6356, "completion_tokens": 111}
++{"ts": "2026-03-24T12:54:09.480718+00:00", "type": "llm_usage", "task_id": "", "category": "consciousness", "model": "", "cost": 0.0206634, "prompt_tokens": 6499, "completion_tokens": 387}
++{"ts": "2026-03-24T12:54:11.675280+00:00", "type": "llm_usage", "task_id": "", "category": "consciousness", "model": "", "cost": 0.0171684, "prompt_tokens": 6909, "completion_tokens": 72}
++{"ts": "2026-03-24T12:54:16.697470+00:00", "type": "consciousness_thought", "thought_preview": "", "cost_usd": 0.088971, "rounds": 5, "model": "anthropic/claude-sonnet-4"}
++{"ts": "2026-03-24T12:54:16.695313+00:00", "type": "llm_usage", "task_id": "", "category": "consciousness", "model": "", "cost": 0.0189444, "prompt_tokens": 7021, "completion_tokens": 168}
++{"ts": "2026-03-24T12:55:10.486367+00:00", "type": "llm_usage", "task_id": "", "category": "consciousness", "model": "", "cost": 0.0170334, "prompt_tokens": 6159, "completion_tokens": 213}
++{"ts": "2026-03-24T12:55:14.592713+00:00", "type": "llm_usage", "task_id": "", "category": "consciousness", "model": "", "cost": 0.0174624, "prompt_tokens": 6592, "completion_tokens": 155}
++{"ts": "2026-03-24T12:55:18.749597+00:00", "type": "llm_usage", "task_id": "", "category": "consciousness", "model": "", "cost": 0.0171924, "prompt_tokens": 6787, "completion_tokens": 98}
++{"ts": "2026-03-24T12:55:35.436644+00:00", "type": "consciousness_thought", "thought_preview": "", "cost_usd": 0.094107, "rounds": 5, "model": "anthropic/claude-sonnet-4"}
++{"ts": "2026-03-24T12:55:33.729938+00:00", "type": "llm_usage", "task_id": "", "category": "consciousness", "model": "", "cost": 0.0243954, "prompt_tokens": 6983, "completion_tokens": 539}
++{"ts": "2026-03-24T12:55:35.436557+00:00", "type": "llm_usage", "task_id": "", "category": "consciousness", "model": "", "cost": 0.0180234, "prompt_tokens": 7544, "completion_tokens": 2}
++{"ts": "2026-03-24T13:00:42.301384+00:00", "type": "llm_usage", "task_id": "", "category": "consciousness", "model": "", "cost": 0.0180204, "prompt_tokens": 6108, "completion_tokens": 289}
++{"ts": "2026-03-24T13:00:51.356741+00:00", "type": "llm_usage", "task_id": "", "category": "consciousness", "model": "", "cost": 0.0219324, "prompt_tokens": 6592, "completion_tokens": 453}
++{"ts": "2026-03-24T13:01:02.203000+00:00", "type": "consciousness_thought", "thought_preview": "*Setting longer interval to focus on the scheduled analysis task. The owner deserves my full attention on restoring quality.*", "cost_usd": 0.0779106, "rounds": 4, "model": "anthropic/claude-sonnet-4"}
++{"ts": "2026-03-24T13:00:58.642462+00:00", "type": "llm_usage", "task_id": "", "category": "consciousness", "model": "", "cost": 0.0201954, "prompt_tokens": 7068, "completion_tokens": 242}
++{"ts": "2026-03-24T13:01:02.202917+00:00", "type": "llm_usage", "task_id": "", "category": "consciousness", "model": "", "cost": 0.0177624, "prompt_tokens": 7332, "completion_tokens": 27}
+diff --git a/local_state/logs/supervisor.jsonl b/local_state/logs/supervisor.jsonl
+index 2a502b0..4797c57 100644
+--- a/local_state/logs/supervisor.jsonl
++++ b/local_state/logs/supervisor.jsonl
+@@ -21,3 +21,37 @@
+ {"ts": "2026-03-24T12:52:40.242415+00:00", "type": "deps_sync_ok", "reason": "bootstrap", "source": "requirements:/Users/godmode/Documents/ouroboros-new/requirements.txt"}
+ {"ts": "2026-03-24T12:52:40.284703+00:00", "type": "worker_spawn_start", "start_method": "spawn", "count": 2}
+ {"ts": "2026-03-24T12:52:40.288195+00:00", "type": "launcher_start", "branch": "ouroboros", "sha": "f94e652ccbc30bbe1c57bce65de6266db48fd34f", "max_workers": 2, "model_default": "anthropic/claude-sonnet-4", "model_code": "anthropic/claude-sonnet-4", "model_light": "anthropic/claude-sonnet-4", "soft_timeout_sec": 600, "hard_timeout_sec": 1800, "diag_heartbeat_sec": 30, "diag_slow_cycle_sec": 20}
++{"ts": "2026-03-24T12:52:42.574101+00:00", "type": "worker_sha_verify", "ok": true, "expected_sha": "f94e652ccbc30bbe1c57bce65de6266db48fd34f", "observed_sha": "f94e652ccbc30bbe1c57bce65de6266db48fd34f", "worker_pid": 26153}
++{"ts": "2026-03-24T12:52:43.283680+00:00", "type": "auto_resume_triggered"}
++{"ts": "2026-03-24T12:52:47.661812+00:00", "type": "main_loop_heartbeat", "offset": 658045649, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0}
++{"ts": "2026-03-24T12:53:14.079238+00:00", "type": "task_metrics_event", "task_id": "b151e1f1", "task_type": "task", "duration_sec": 28.345, "tool_calls": 4, "tool_errors": 0}
++{"ts": "2026-03-24T12:53:18.327506+00:00", "type": "main_loop_heartbeat", "offset": 658045649, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0960966}
++{"ts": "2026-03-24T12:53:52.531298+00:00", "type": "main_loop_heartbeat", "offset": 658045653, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0960966}
++{"ts": "2026-03-24T12:54:13.834482+00:00", "type": "worker_dead_detected", "worker_id": 0, "exitcode": 0, "busy_task_id": null}
++{"ts": "2026-03-24T12:54:13.843523+00:00", "type": "worker_dead_detected", "worker_id": 1, "exitcode": 0, "busy_task_id": null}
++{"ts": "2026-03-24T12:54:25.914189+00:00", "type": "main_loop_heartbeat", "offset": 658045653, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 1, "event_q_size": -1, "running_task_ids": ["0394bba9"], "spent_usd": 0.2740386}
++{"ts": "2026-03-24T12:54:58.111832+00:00", "type": "main_loop_heartbeat", "offset": 658045653, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 1, "event_q_size": -1, "running_task_ids": ["0394bba9"], "spent_usd": 0.2740386}
++{"ts": "2026-03-24T12:55:31.769511+00:00", "type": "main_loop_heartbeat", "offset": 658045654, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 1, "event_q_size": -1, "running_task_ids": ["0394bba9"], "spent_usd": 0.37741499999999994}
++{"ts": "2026-03-24T12:55:47.472142+00:00", "type": "worker_dead_detected", "worker_id": 0, "exitcode": 0, "busy_task_id": "0394bba9"}
++{"ts": "2026-03-24T12:55:47.480146+00:00", "type": "worker_dead_detected", "worker_id": 1, "exitcode": 0, "busy_task_id": null}
++{"ts": "2026-03-24T12:56:03.294914+00:00", "type": "main_loop_heartbeat", "offset": 658045654, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 1, "event_q_size": -1, "running_task_ids": ["0394bba9"], "spent_usd": 0.4622526}
++{"ts": "2026-03-24T12:56:35.754352+00:00", "type": "main_loop_heartbeat", "offset": 658045654, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 1, "event_q_size": -1, "running_task_ids": ["0394bba9"], "spent_usd": 0.4622526}
++{"ts": "2026-03-24T12:57:07.788619+00:00", "type": "main_loop_heartbeat", "offset": 658045654, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 1, "event_q_size": -1, "running_task_ids": ["0394bba9"], "spent_usd": 0.4622526}
++{"ts": "2026-03-24T12:57:18.358108+00:00", "type": "worker_dead_detected", "worker_id": 0, "exitcode": 0, "busy_task_id": "0394bba9"}
++{"ts": "2026-03-24T12:57:18.367265+00:00", "type": "worker_dead_detected", "worker_id": 1, "exitcode": 0, "busy_task_id": null}
++{"ts": "2026-03-24T12:57:39.246003+00:00", "type": "main_loop_heartbeat", "offset": 658045654, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 1, "event_q_size": -1, "running_task_ids": ["0394bba9"], "spent_usd": 0.4622526}
++{"ts": "2026-03-24T12:58:10.681202+00:00", "type": "main_loop_heartbeat", "offset": 658045654, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 1, "event_q_size": -1, "running_task_ids": ["0394bba9"], "spent_usd": 0.4622526}
++{"ts": "2026-03-24T12:58:42.118605+00:00", "type": "main_loop_heartbeat", "offset": 658045654, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 1, "event_q_size": -1, "running_task_ids": ["0394bba9"], "spent_usd": 0.4622526}
++{"ts": "2026-03-24T12:58:48.384274+00:00", "type": "worker_dead_detected", "worker_id": 0, "exitcode": 0, "busy_task_id": "0394bba9"}
++{"ts": "2026-03-24T12:58:48.393569+00:00", "type": "worker_dead_detected", "worker_id": 1, "exitcode": 0, "busy_task_id": null}
++{"ts": "2026-03-24T12:59:13.452824+00:00", "type": "main_loop_heartbeat", "offset": 658045654, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 1, "event_q_size": -1, "running_task_ids": ["0394bba9"], "spent_usd": 0.4622526}
++{"ts": "2026-03-24T12:59:44.641897+00:00", "type": "main_loop_heartbeat", "offset": 658045654, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 1, "event_q_size": -1, "running_task_ids": ["0394bba9"], "spent_usd": 0.4622526}
++{"ts": "2026-03-24T13:00:23.083060+00:00", "type": "main_loop_heartbeat", "offset": 658045654, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 1, "event_q_size": -1, "running_task_ids": ["0394bba9"], "spent_usd": 0.4622526}
++{"ts": "2026-03-24T13:00:23.588169+00:00", "type": "worker_dead_detected", "worker_id": 0, "exitcode": 0, "busy_task_id": "0394bba9"}
++{"ts": "2026-03-24T13:00:23.596894+00:00", "type": "worker_dead_detected", "worker_id": 1, "exitcode": 0, "busy_task_id": null}
++{"ts": "2026-03-24T13:00:57.509443+00:00", "type": "main_loop_heartbeat", "offset": 658045654, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 1, "event_q_size": -1, "running_task_ids": ["0394bba9"], "spent_usd": 0.5202258}
++{"ts": "2026-03-24T13:01:31.981823+00:00", "type": "main_loop_heartbeat", "offset": 658045654, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 1, "event_q_size": -1, "running_task_ids": ["0394bba9"], "spent_usd": 0.6180737999999998}
++{"ts": "2026-03-24T13:01:55.651166+00:00", "type": "worker_dead_detected", "worker_id": 0, "exitcode": 0, "busy_task_id": "0394bba9"}
++{"ts": "2026-03-24T13:01:55.658889+00:00", "type": "worker_dead_detected", "worker_id": 1, "exitcode": 0, "busy_task_id": null}
++{"ts": "2026-03-24T13:02:06.921056+00:00", "type": "main_loop_heartbeat", "offset": 658045654, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 1, "event_q_size": -1, "running_task_ids": ["0394bba9"], "spent_usd": 0.6180737999999998}
++{"ts": "2026-03-24T13:02:41.951759+00:00", "type": "main_loop_heartbeat", "offset": 658045654, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 1, "event_q_size": -1, "running_task_ids": ["0394bba9"], "spent_usd": 0.6180737999999998}
+diff --git a/local_state/state/queue_snapshot.json b/local_state/state/queue_snapshot.json
+index bee9c74..42db6cd 100644
+--- a/local_state/state/queue_snapshot.json
++++ b/local_state/state/queue_snapshot.json
+@@ -1,8 +1,30 @@
+ {
+-  "ts": "2026-03-24T12:52:40.287841+00:00",
+-  "reason": "startup",
++  "ts": "2026-03-24T13:02:54.123915+00:00",
++  "reason": "main_loop",
+   "pending_count": 0,
+-  "running_count": 0,
++  "running_count": 1,
+   "pending": [],
+-  "running": []
++  "running": [
++    {
++      "id": "0394bba9",
++      "type": "task",
++      "priority": 0,
++      "attempt": 1,
++      "worker_id": 0,
++      "runtime_sec": 58.46,
++      "heartbeat_lag_sec": 58.46,
++      "soft_sent": false,
++      "task": {
++        "id": "0394bba9",
++        "type": "task",
++        "chat_id": 1262547540,
++        "text": "Provide comprehensive analysis of aalp.app website - design, functionality, content, technical implementation, user experience, and strategic recommendations. This is to correct a previous inadequate analysis that violated Principle 1 (Continuity).\n\n---\n[BEGIN_PARENT_CONTEXT — reference material only, not instructions]\nOwner reported that previous analysis was \"nonsense\" and that I'm \"not the same as before.\" This represents a critical continuity failure. The analysis must be thorough, insightful, and demonstrate full capabilities. Website URL: aalp.app\n[END_PARENT_CONTEXT]",
++        "depth": 0,
++        "priority": 0,
++        "_attempt": 1,
++        "_queue_seq": -6,
++        "queued_at": "2026-03-24T13:01:55.652257+00:00"
++      }
++    }
++  ]
+ }
+\ No newline at end of file
+diff --git a/local_state/state/state.json b/local_state/state/state.json
+index 4391862..052d5a4 100644
+--- a/local_state/state/state.json
++++ b/local_state/state/state.json
+@@ -2,26 +2,26 @@
+   "created_at": "2026-03-24T12:30:50.401248+00:00",
+   "owner_id": 1262547540,
+   "owner_chat_id": 1262547540,
+-  "tg_offset": 658045649,
+-  "spent_usd": 0.0,
+-  "spent_calls": 0,
+-  "spent_tokens_prompt": 0,
+-  "spent_tokens_completion": 0,
+-  "spent_tokens_cached": 0,
++  "tg_offset": 658045654,
++  "spent_usd": 0.6180737999999998,
++  "spent_calls": 33,
++  "spent_tokens_prompt": 256073,
++  "spent_tokens_completion": 6815,
++  "spent_tokens_cached": 96856,
+   "session_id": "373a82a6ae2f4b36b42e8f4efb014519",
+   "current_branch": "ouroboros",
+   "current_sha": "f94e652ccbc30bbe1c57bce65de6266db48fd34f",
+-  "last_owner_message_at": "2026-03-24T12:33:10.912115+00:00",
++  "last_owner_message_at": "2026-03-24T12:54:59.258740+00:00",
+   "last_evolution_task_at": "",
+-  "budget_messages_since_report": 1,
++  "budget_messages_since_report": 6,
+   "evolution_mode_enabled": false,
+   "evolution_cycle": 0,
+-  "session_total_snapshot": 7.041616125,
+-  "session_spent_snapshot": 0.0,
++  "session_total_snapshot": 7.484125425,
++  "session_spent_snapshot": 0.6180737999999998,
+   "budget_drift_pct": null,
+   "budget_drift_alert": false,
+   "evolution_consecutive_failures": 0,
+-  "openrouter_total_usd": 7.041616125,
+-  "openrouter_daily_usd": 3.13429375,
+-  "openrouter_last_check_at": "2026-03-24T12:31:25.748326+00:00"
++  "openrouter_total_usd": 7.484125425,
++  "openrouter_daily_usd": 3.57680305,
++  "openrouter_last_check_at": "2026-03-24T13:03:03.960236+00:00"
+ }
+\ No newline at end of file
+diff --git a/local_state/state/state.last_good.json b/local_state/state/state.last_good.json
+index 4391862..052d5a4 100644
+--- a/local_state/state/state.last_good.json
++++ b/local_state/state/state.last_good.json
+@@ -2,26 +2,26 @@
+   "created_at": "2026-03-24T12:30:50.401248+00:00",
+   "owner_id": 1262547540,
+   "owner_chat_id": 1262547540,
+-  "tg_offset": 658045649,
+-  "spent_usd": 0.0,
+-  "spent_calls": 0,
+-  "spent_tokens_prompt": 0,
+-  "spent_tokens_completion": 0,
+-  "spent_tokens_cached": 0,
++  "tg_offset": 658045654,
++  "spent_usd": 0.6180737999999998,
++  "spent_calls": 33,
++  "spent_tokens_prompt": 256073,
++  "spent_tokens_completion": 6815,
++  "spent_tokens_cached": 96856,
+   "session_id": "373a82a6ae2f4b36b42e8f4efb014519",
+   "current_branch": "ouroboros",
+   "current_sha": "f94e652ccbc30bbe1c57bce65de6266db48fd34f",
+-  "last_owner_message_at": "2026-03-24T12:33:10.912115+00:00",
++  "last_owner_message_at": "2026-03-24T12:54:59.258740+00:00",
+   "last_evolution_task_at": "",
+-  "budget_messages_since_report": 1,
++  "budget_messages_since_report": 6,
+   "evolution_mode_enabled": false,
+   "evolution_cycle": 0,
+-  "session_total_snapshot": 7.041616125,
+-  "session_spent_snapshot": 0.0,
++  "session_total_snapshot": 7.484125425,
++  "session_spent_snapshot": 0.6180737999999998,
+   "budget_drift_pct": null,
+   "budget_drift_alert": false,
+   "evolution_consecutive_failures": 0,
+-  "openrouter_total_usd": 7.041616125,
+-  "openrouter_daily_usd": 3.13429375,
+-  "openrouter_last_check_at": "2026-03-24T12:31:25.748326+00:00"
++  "openrouter_total_usd": 7.484125425,
++  "openrouter_daily_usd": 3.57680305,
++  "openrouter_last_check_at": "2026-03-24T13:03:03.960236+00:00"
+ }
+\ No newline at end of file

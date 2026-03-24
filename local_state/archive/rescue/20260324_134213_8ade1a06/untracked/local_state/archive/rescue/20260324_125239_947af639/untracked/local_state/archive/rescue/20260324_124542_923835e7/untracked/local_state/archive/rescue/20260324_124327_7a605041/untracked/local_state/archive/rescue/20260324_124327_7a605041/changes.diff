@@ -1,0 +1,65 @@
+diff --git a/local_state/logs/supervisor.jsonl b/local_state/logs/supervisor.jsonl
+index e6e158a..6a35a49 100644
+--- a/local_state/logs/supervisor.jsonl
++++ b/local_state/logs/supervisor.jsonl
+@@ -14,3 +14,7 @@
+ {"ts": "2026-03-24T12:35:51.125201+00:00", "type": "main_loop_heartbeat", "offset": 658045649, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0}
+ {"ts": "2026-03-24T12:36:12.680568+00:00", "type": "worker_dead_detected", "worker_id": 0, "exitcode": 0, "busy_task_id": null}
+ {"ts": "2026-03-24T12:36:12.686763+00:00", "type": "worker_dead_detected", "worker_id": 1, "exitcode": 0, "busy_task_id": null}
++{"ts": "2026-03-24T12:42:32.142639+00:00", "type": "deps_sync_ok", "reason": "bootstrap", "source": "requirements:/Users/godmode/Documents/ouroboros-new/requirements.txt"}
++{"ts": "2026-03-24T12:42:32.185467+00:00", "type": "worker_spawn_start", "start_method": "spawn", "count": 2}
++{"ts": "2026-03-24T12:42:32.189114+00:00", "type": "launcher_start", "branch": "ouroboros", "sha": "ea47b197dc9af84a740efc6067269cdf7761da9b", "max_workers": 2, "model_default": "qwen3.5:9b", "model_code": "qwen2.5-coder:7b", "model_light": "qwen3.5:4b-fast", "soft_timeout_sec": 600, "hard_timeout_sec": 1800, "diag_heartbeat_sec": 30, "diag_slow_cycle_sec": 20}
++{"ts": "2026-03-24T12:42:33.204382+00:00", "type": "main_loop_heartbeat", "offset": 658045649, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0}
+diff --git a/local_state/state/queue_snapshot.json b/local_state/state/queue_snapshot.json
+index 7f10b2e..90cfa40 100644
+--- a/local_state/state/queue_snapshot.json
++++ b/local_state/state/queue_snapshot.json
+@@ -1,5 +1,5 @@
+ {
+-  "ts": "2026-03-24T12:36:13.769511+00:00",
++  "ts": "2026-03-24T12:42:49.256994+00:00",
+   "reason": "main_loop",
+   "pending_count": 0,
+   "running_count": 0,
+diff --git a/local_state/state/state.json b/local_state/state/state.json
+index c278b53..00b5941 100644
+--- a/local_state/state/state.json
++++ b/local_state/state/state.json
+@@ -10,7 +10,7 @@
+   "spent_tokens_cached": 0,
+   "session_id": "373a82a6ae2f4b36b42e8f4efb014519",
+   "current_branch": "ouroboros",
+-  "current_sha": "b7af646a76a6922d170829d2b09a76febb8a9b79",
++  "current_sha": "ea47b197dc9af84a740efc6067269cdf7761da9b",
+   "last_owner_message_at": "2026-03-24T12:33:10.912115+00:00",
+   "last_evolution_task_at": "",
+   "budget_messages_since_report": 1,
+@@ -23,5 +23,5 @@
+   "evolution_consecutive_failures": 0,
+   "openrouter_total_usd": 7.041616125,
+   "openrouter_daily_usd": 3.13429375,
+-  "openrouter_last_check_at": "2026-03-24T12:31:25.748326+00:00"
++  "openrouter_last_check_at": "2026-03-24T12:43:26.128756+00:00"
+ }
+\ No newline at end of file
+diff --git a/local_state/state/state.last_good.json b/local_state/state/state.last_good.json
+index c278b53..00b5941 100644
+--- a/local_state/state/state.last_good.json
++++ b/local_state/state/state.last_good.json
+@@ -10,7 +10,7 @@
+   "spent_tokens_cached": 0,
+   "session_id": "373a82a6ae2f4b36b42e8f4efb014519",
+   "current_branch": "ouroboros",
+-  "current_sha": "b7af646a76a6922d170829d2b09a76febb8a9b79",
++  "current_sha": "ea47b197dc9af84a740efc6067269cdf7761da9b",
+   "last_owner_message_at": "2026-03-24T12:33:10.912115+00:00",
+   "last_evolution_task_at": "",
+   "budget_messages_since_report": 1,
+@@ -23,5 +23,5 @@
+   "evolution_consecutive_failures": 0,
+   "openrouter_total_usd": 7.041616125,
+   "openrouter_daily_usd": 3.13429375,
+-  "openrouter_last_check_at": "2026-03-24T12:31:25.748326+00:00"
++  "openrouter_last_check_at": "2026-03-24T12:43:26.128756+00:00"
+ }
+\ No newline at end of file

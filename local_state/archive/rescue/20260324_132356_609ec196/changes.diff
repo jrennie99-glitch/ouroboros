@@ -1,0 +1,194 @@
+diff --git a/local_state/logs/chat.jsonl b/local_state/logs/chat.jsonl
+index 29bc666..470f8a4 100644
+--- a/local_state/logs/chat.jsonl
++++ b/local_state/logs/chat.jsonl
+@@ -1,2 +1,9 @@
+ {"ts": "2026-03-24T12:33:10.915314+00:00", "session_id": "373a82a6ae2f4b36b42e8f4efb014519", "direction": "in", "chat_id": 1262547540, "user_id": 1262547540, "text": "Gave you my website to check and you gave some nonsense you’re not the same as you was before I don’t know what went wrong"}
+ {"ts": "2026-03-24T12:33:10.917322+00:00", "session_id": "373a82a6ae2f4b36b42e8f4efb014519", "direction": "out", "chat_id": 1262547540, "user_id": 1262547540, "text": "Owner registered. Ouroboros online."}
++{"ts": "2026-03-24T13:19:08.639663+00:00", "session_id": "373a82a6ae2f4b36b42e8f4efb014519", "direction": "in", "chat_id": 1262547540, "user_id": 1262547540, "text": "Consciousness has to work this is a different type of assistant"}
++{"ts": "2026-03-24T13:21:31.829442+00:00", "session_id": "373a82a6ae2f4b36b42e8f4efb014519", "direction": "in", "chat_id": 1262547540, "user_id": 1262547540, "text": "Are you there"}
++{"ts": "2026-03-24T13:22:22.932105+00:00", "session_id": "373a82a6ae2f4b36b42e8f4efb014519", "direction": "out", "chat_id": 1262547540, "user_id": 1262547540, "text": "I apologize for giving nonsense analysis earlier. I understand you're frustrated that I didn't meet your standards. \n\nTo make this right, could you please share your website URL again? I want to provide a thorough, high-quality analysis this time that demonstrates my capabilities properly.\n\nI'll take the time to examine your site carefully and give you meaningful feedback."}
++{"ts": "2026-03-24T13:22:24.101672+00:00", "session_id": "373a82a6ae2f4b36b42e8f4efb014519", "direction": "out", "chat_id": 1262547540, "user_id": 1262547540, "text": "Thank you for your message. I hear you - consciousness does have to work, and I'm committed to being that different type of assistant who delivers real value.\n\nTo start fresh: could you please share your website URL again? I want to give it the careful, thorough analysis it deserves this time.\n\nI'll examine it from multiple angles - technical, UX, content, strategy - and provide actionable feedback that actually helps you improve it."}
++{"ts": "2026-03-24T13:22:25.242602+00:00", "session_id": "373a82a6ae2f4b36b42e8f4efb014519", "direction": "out", "chat_id": 1262547540, "user_id": 1262547540, "text": "I'm here. I've been waiting for you to provide your website URL so I can provide the analysis you requested earlier. I apologize for the previous failure and am ready to give it my full attention as soon as you share the address.\n\nWithout the URL, I can't proceed with the website review. Would you be able to provide it now? Or is there something else I can help you with?"}
++{"ts": "2026-03-24T13:22:26.416006+00:00", "session_id": "373a82a6ae2f4b36b42e8f4efb014519", "direction": "out", "chat_id": 1262547540, "user_id": 1262547540, "text": "I am here. I'm waiting for you to provide the website URL you wanted me to analyze. I previously gave you a poor analysis, and I want to correct that, but I need the website address to do so.\n\nCould you please provide the URL? I am ready to begin a thorough review as soon as you share it."}
++{"ts": "2026-03-24T13:23:45.463934+00:00", "session_id": "373a82a6ae2f4b36b42e8f4efb014519", "direction": "in", "chat_id": 1262547540, "user_id": 1262547540, "text": "I already gave and you gave a respond already we need to fix you you’re not responding fast enough"}
+diff --git a/local_state/logs/events.jsonl b/local_state/logs/events.jsonl
+index 2fb6392..4235445 100644
+--- a/local_state/logs/events.jsonl
++++ b/local_state/logs/events.jsonl
+@@ -5,3 +5,46 @@
+ {"ts": "2026-03-24T13:03:08.643105+00:00", "type": "worker_boot", "pid": 26906, "git_branch": "ouroboros", "git_sha": "bb8965efd7bc07ff3122dd82f66c78aa8cd4dcee"}
+ {"ts": "2026-03-24T13:09:06.374367+00:00", "type": "worker_boot", "pid": 27379, "git_branch": "ouroboros", "git_sha": "b2f6f13c6ca885acddcd79f07657ce49a7be99ea"}
+ {"ts": "2026-03-24T13:18:22.240165+00:00", "type": "worker_boot", "pid": 28246, "git_branch": "ouroboros", "git_sha": "1d9af57c4310bb703472d6dfbf2e3c29ff2570b3"}
++{"ts": "2026-03-24T13:18:23.115662+00:00", "type": "startup_verification", "checks": {"uncommitted_changes": {"status": "warning", "files": ["M local_state/logs/events.jsonl", "M local_state/logs/supervisor.jsonl", "M local_state/state/queue_snapshot.json", "M local_state/state/state.json", "M local_state/state/state.last_good.json", "?? local_state/analysis/", "?? local_state/archive/rescue/20260324_123643_b6ccca64/", "?? local_state/archive/rescue/20260324_124231_46c7d792/", "?? local_state/archive/rescue/20260324_124327_7a605041/", "?? local_state/archive/rescue/20260324_124542_923835e7/", "?? local_state/archive/rescue/20260324_125239_947af639/", "?? local_state/archive/rescue/20260324_130305_1a12ab4b/", "?? local_state/archive/rescue/20260324_130903_03a66603/", "?? local_state/archive/rescue/20260324_131659_2cb03593/", "?? local_state/archive/rescue/20260324_131819_d72c8754/", "?? local_state/logs/progress.jsonl", "?? local_state/logs/tools.jsonl", "?? local_state/memory/", "?? local_state/task_results/"], "auto_committed": false}, "version_sync": {"version_file": "6.2.0", "pyproject_version": "6.2.0", "readme_version": "6.2.0", "status": "warning", "message": "no_tags"}, "budget": {"status": "unconfigured"}}, "issues_count": 1, "git_sha": "1d9af57c4310bb703472d6dfbf2e3c29ff2570b3"}
++{"ts": "2026-03-24T13:18:23.116962+00:00", "type": "task_received", "task": {"id": "19165a44", "type": "task", "chat_id": 1262547540, "text": "[auto-resume after restart] Continue your work. Read scratchpad and identity — they contain context of what you were doing.", "_is_direct_chat": true, "text_len": 123, "text_sha256": "72908e1135966dce4c1a8e653a9f6dd40b54029296635f960e5f5a74ef90c7a3", "text_truncated": false}}
++{"ts": "2026-03-24T13:18:31.004385+00:00", "type": "llm_round", "task_id": "19165a44", "round": 1, "model": "nvidia/nemotron-3-super-120b-a12b:free", "reasoning_effort": "medium", "prompt_tokens": 12970, "completion_tokens": 51, "cached_tokens": 0, "cache_write_tokens": 0, "cost_usd": 0.0}
++{"ts": "2026-03-24T13:18:34.222024+00:00", "type": "llm_round", "task_id": "19165a44", "round": 2, "model": "nvidia/nemotron-3-super-120b-a12b:free", "reasoning_effort": "medium", "prompt_tokens": 13365, "completion_tokens": 57, "cached_tokens": 0, "cache_write_tokens": 0, "cost_usd": 0.0}
++{"ts": "2026-03-24T13:18:31.004266+00:00", "type": "llm_usage", "task_id": "19165a44", "category": "task", "model": "nvidia/nemotron-3-super-120b-a12b:free", "cost": 0, "prompt_tokens": 12970, "completion_tokens": 51}
++{"ts": "2026-03-24T13:18:34.221991+00:00", "type": "llm_usage", "task_id": "19165a44", "category": "task", "model": "nvidia/nemotron-3-super-120b-a12b:free", "cost": 0, "prompt_tokens": 13365, "completion_tokens": 57}
++{"ts": "2026-03-24T13:18:39.826052+00:00", "type": "llm_round", "task_id": "19165a44", "round": 3, "model": "nvidia/nemotron-3-super-120b-a12b:free", "reasoning_effort": "medium", "prompt_tokens": 13484, "completion_tokens": 127, "cached_tokens": 0, "cache_write_tokens": 0, "cost_usd": 0.0}
++{"ts": "2026-03-24T13:18:39.825973+00:00", "type": "llm_usage", "task_id": "19165a44", "category": "task", "model": "nvidia/nemotron-3-super-120b-a12b:free", "cost": 0, "prompt_tokens": 13484, "completion_tokens": 127}
++{"ts": "2026-03-24T13:18:53.204431+00:00", "type": "llm_round", "task_id": "19165a44", "round": 4, "model": "nvidia/nemotron-3-super-120b-a12b:free", "reasoning_effort": "medium", "prompt_tokens": 13607, "completion_tokens": 614, "cached_tokens": 0, "cache_write_tokens": 0, "cost_usd": 0.0}
++{"ts": "2026-03-24T13:18:53.206326+00:00", "type": "proactive_message", "reason": "Acknowledging previous failure and requesting website URL for proper analysis", "text_preview": "I apologize for giving nonsense analysis earlier. I understand you're frustrated that I didn't meet your standards. \n\nTo make this right, could you please share your website URL again? I want to provi"}
++{"ts": "2026-03-24T13:18:53.204359+00:00", "type": "llm_usage", "task_id": "19165a44", "category": "task", "model": "nvidia/nemotron-3-super-120b-a12b:free", "cost": 0, "prompt_tokens": 13607, "completion_tokens": 614}
++{"ts": "2026-03-24T13:19:09.182636+00:00", "type": "llm_round", "task_id": "19165a44", "round": 5, "model": "nvidia/nemotron-3-super-120b-a12b:free", "reasoning_effort": "medium", "prompt_tokens": 13747, "completion_tokens": 57, "cached_tokens": 0, "cache_write_tokens": 0, "cost_usd": 0.0}
++{"ts": "2026-03-24T13:19:09.182553+00:00", "type": "llm_usage", "task_id": "19165a44", "category": "task", "model": "nvidia/nemotron-3-super-120b-a12b:free", "cost": 0, "prompt_tokens": 13747, "completion_tokens": 57}
++{"ts": "2026-03-24T13:19:31.477938+00:00", "type": "llm_round", "task_id": "19165a44", "round": 6, "model": "nvidia/nemotron-3-super-120b-a12b:free", "reasoning_effort": "medium", "prompt_tokens": 13920, "completion_tokens": 272, "cached_tokens": 0, "cache_write_tokens": 0, "cost_usd": 0.0}
++{"ts": "2026-03-24T13:19:31.479799+00:00", "type": "proactive_message", "reason": "Requesting website URL for proper analysis after acknowledging previous failure", "text_preview": "Thank you for your message. I hear you - consciousness does have to work, and I'm committed to being that different type of assistant who delivers real value.\n\nTo start fresh: could you please share y"}
++{"ts": "2026-03-24T13:19:31.477871+00:00", "type": "llm_usage", "task_id": "19165a44", "category": "task", "model": "nvidia/nemotron-3-super-120b-a12b:free", "cost": 0, "prompt_tokens": 13920, "completion_tokens": 272}
++{"ts": "2026-03-24T13:19:42.744764+00:00", "type": "llm_round", "task_id": "19165a44", "round": 7, "model": "nvidia/nemotron-3-super-120b-a12b:free", "reasoning_effort": "medium", "prompt_tokens": 14077, "completion_tokens": 38, "cached_tokens": 0, "cache_write_tokens": 0, "cost_usd": 0.0}
++{"ts": "2026-03-24T13:19:42.744670+00:00", "type": "llm_usage", "task_id": "19165a44", "category": "task", "model": "nvidia/nemotron-3-super-120b-a12b:free", "cost": 0, "prompt_tokens": 14077, "completion_tokens": 38}
++{"ts": "2026-03-24T13:19:58.438872+00:00", "type": "llm_round", "task_id": "19165a44", "round": 8, "model": "nvidia/nemotron-3-super-120b-a12b:free", "reasoning_effort": "medium", "prompt_tokens": 14233, "completion_tokens": 291, "cached_tokens": 0, "cache_write_tokens": 0, "cost_usd": 0.0}
++{"ts": "2026-03-24T13:19:58.438802+00:00", "type": "llm_usage", "task_id": "19165a44", "category": "task", "model": "nvidia/nemotron-3-super-120b-a12b:free", "cost": 0, "prompt_tokens": 14233, "completion_tokens": 291}
++{"ts": "2026-03-24T13:20:34.288542+00:00", "type": "llm_round", "task_id": "19165a44", "round": 9, "model": "nvidia/nemotron-3-super-120b-a12b:free", "reasoning_effort": "medium", "prompt_tokens": 14008, "completion_tokens": 576, "cached_tokens": 0, "cache_write_tokens": 0, "cost_usd": 0.0}
++{"ts": "2026-03-24T13:20:34.288469+00:00", "type": "llm_usage", "task_id": "19165a44", "category": "task", "model": "nvidia/nemotron-3-super-120b-a12b:free", "cost": 0, "prompt_tokens": 14008, "completion_tokens": 576}
++{"ts": "2026-03-24T13:20:42.139389+00:00", "type": "llm_round", "task_id": "19165a44", "round": 10, "model": "nvidia/nemotron-3-super-120b-a12b:free", "reasoning_effort": "medium", "prompt_tokens": 14266, "completion_tokens": 68, "cached_tokens": 0, "cache_write_tokens": 0, "cost_usd": 0.0}
++{"ts": "2026-03-24T13:20:42.139320+00:00", "type": "llm_usage", "task_id": "19165a44", "category": "task", "model": "nvidia/nemotron-3-super-120b-a12b:free", "cost": 0, "prompt_tokens": 14266, "completion_tokens": 68}
++{"ts": "2026-03-24T13:21:18.482547+00:00", "type": "llm_round", "task_id": "19165a44", "round": 11, "model": "nvidia/nemotron-3-super-120b-a12b:free", "reasoning_effort": "medium", "prompt_tokens": 14422, "completion_tokens": 241, "cached_tokens": 0, "cache_write_tokens": 0, "cost_usd": 0.0}
++{"ts": "2026-03-24T13:21:18.482524+00:00", "type": "llm_usage", "task_id": "19165a44", "category": "task", "model": "nvidia/nemotron-3-super-120b-a12b:free", "cost": 0, "prompt_tokens": 14422, "completion_tokens": 241}
++{"ts": "2026-03-24T13:21:53.218563+00:00", "type": "llm_round", "task_id": "19165a44", "round": 12, "model": "nvidia/nemotron-3-super-120b-a12b:free", "reasoning_effort": "medium", "prompt_tokens": 14478, "completion_tokens": 518, "cached_tokens": 0, "cache_write_tokens": 0, "cost_usd": 0.0}
++{"ts": "2026-03-24T13:21:53.218495+00:00", "type": "llm_usage", "task_id": "19165a44", "category": "task", "model": "nvidia/nemotron-3-super-120b-a12b:free", "cost": 0, "prompt_tokens": 14478, "completion_tokens": 518}
++{"ts": "2026-03-24T13:21:53.854557+00:00", "type": "llm_api_error", "task_id": "19165a44", "round": 13, "attempt": 1, "model": "nvidia/nemotron-3-super-120b-a12b:free", "error": "BadRequestError('Error code: 400 - {\\'error\\': {\\'message\\': \\'Provider returned error\\', \\'code\\': 400, \\'metadata\\': {\\'raw\\': \\'{\"error\":{\"message\":\"Unterminated string starting at: line 1 column 10 (char 9)\",\"type\":\"BadRequestError\",\"param\":null,\"code\":400}}\\', \\'provider_name\\': \\'Nvidia\\', \\'is_byok\\': False}}, \\'user_id\\': \\'user_39F8ABTHb5GHXXGQmiXnhE61qz7\\'}')"}
++{"ts": "2026-03-24T13:21:56.612491+00:00", "type": "llm_api_error", "task_id": "19165a44", "round": 13, "attempt": 2, "model": "nvidia/nemotron-3-super-120b-a12b:free", "error": "BadRequestError('Error code: 400 - {\\'error\\': {\\'message\\': \\'Provider returned error\\', \\'code\\': 400, \\'metadata\\': {\\'raw\\': \\'{\"error\":{\"message\":\"Unterminated string starting at: line 1 column 10 (char 9)\",\"type\":\"BadRequestError\",\"param\":null,\"code\":400}}\\', \\'provider_name\\': \\'Nvidia\\', \\'is_byok\\': False}}, \\'user_id\\': \\'user_39F8ABTHb5GHXXGQmiXnhE61qz7\\'}')"}
++{"ts": "2026-03-24T13:22:01.319516+00:00", "type": "llm_api_error", "task_id": "19165a44", "round": 13, "attempt": 3, "model": "nvidia/nemotron-3-super-120b-a12b:free", "error": "BadRequestError('Error code: 400 - {\\'error\\': {\\'message\\': \\'Provider returned error\\', \\'code\\': 400, \\'metadata\\': {\\'raw\\': \\'{\"error\":{\"message\":\"Unterminated string starting at: line 1 column 10 (char 9)\",\"type\":\"BadRequestError\",\"param\":null,\"code\":400}}\\', \\'provider_name\\': \\'Nvidia\\', \\'is_byok\\': False}}, \\'user_id\\': \\'user_39F8ABTHb5GHXXGQmiXnhE61qz7\\'}')"}
++{"ts": "2026-03-24T13:22:04.050705+00:00", "type": "llm_round", "task_id": "19165a44", "round": 13, "model": "google/gemini-2.5-pro-preview", "reasoning_effort": "medium", "prompt_tokens": 12727, "completion_tokens": 99, "cached_tokens": 0, "cache_write_tokens": 0, "cost_usd": 0.01689875}
++{"ts": "2026-03-24T13:22:04.052975+00:00", "type": "proactive_message", "reason": "", "text_preview": "I'm here. I've been waiting for you to provide your website URL so I can provide the analysis you requested earlier. I apologize for the previous failure and am ready to give it my full attention as s"}
++{"ts": "2026-03-24T13:22:04.687247+00:00", "type": "llm_api_error", "task_id": "19165a44", "round": 14, "attempt": 1, "model": "nvidia/nemotron-3-super-120b-a12b:free", "error": "BadRequestError('Error code: 400 - {\\'error\\': {\\'message\\': \\'Provider returned error\\', \\'code\\': 400, \\'metadata\\': {\\'raw\\': \\'{\"error\":{\"message\":\"Unterminated string starting at: line 1 column 10 (char 9)\",\"type\":\"BadRequestError\",\"param\":null,\"code\":400}}\\', \\'provider_name\\': \\'Nvidia\\', \\'is_byok\\': False}}, \\'user_id\\': \\'user_39F8ABTHb5GHXXGQmiXnhE61qz7\\'}')"}
++{"ts": "2026-03-24T13:22:04.050638+00:00", "type": "llm_usage", "task_id": "19165a44", "category": "task", "model": "google/gemini-2.5-pro-preview", "cost": 0.01689875, "prompt_tokens": 12727, "completion_tokens": 99}
++{"ts": "2026-03-24T13:22:07.339360+00:00", "type": "llm_api_error", "task_id": "19165a44", "round": 14, "attempt": 2, "model": "nvidia/nemotron-3-super-120b-a12b:free", "error": "BadRequestError('Error code: 400 - {\\'error\\': {\\'message\\': \\'Provider returned error\\', \\'code\\': 400, \\'metadata\\': {\\'raw\\': \\'{\"error\":{\"message\":\"Unterminated string starting at: line 1 column 10 (char 9)\",\"type\":\"BadRequestError\",\"param\":null,\"code\":400}}\\', \\'provider_name\\': \\'Nvidia\\', \\'is_byok\\': False}}, \\'user_id\\': \\'user_39F8ABTHb5GHXXGQmiXnhE61qz7\\'}')"}
++{"ts": "2026-03-24T13:22:12.013137+00:00", "type": "llm_api_error", "task_id": "19165a44", "round": 14, "attempt": 3, "model": "nvidia/nemotron-3-super-120b-a12b:free", "error": "BadRequestError('Error code: 400 - {\\'error\\': {\\'message\\': \\'Provider returned error\\', \\'code\\': 400, \\'metadata\\': {\\'raw\\': \\'{\"error\":{\"message\":\"Unterminated string starting at: line 1 column 10 (char 9)\",\"type\":\"BadRequestError\",\"param\":null,\"code\":400}}\\', \\'provider_name\\': \\'Nvidia\\', \\'is_byok\\': False}}, \\'user_id\\': \\'user_39F8ABTHb5GHXXGQmiXnhE61qz7\\'}')"}
++{"ts": "2026-03-24T13:22:19.479229+00:00", "type": "llm_round", "task_id": "19165a44", "round": 14, "model": "google/gemini-2.5-pro-preview", "reasoning_effort": "medium", "prompt_tokens": 12753, "completion_tokens": 533, "cached_tokens": 0, "cache_write_tokens": 0, "cost_usd": 0.02127125}
++{"ts": "2026-03-24T13:22:19.480700+00:00", "type": "task_eval", "ok": true, "task_id": "19165a44", "task_type": "task", "duration_sec": 236.364, "tool_calls": 13, "tool_errors": 0, "response_len": 289}
++{"ts": "2026-03-24T13:22:19.481183+00:00", "type": "task_done", "task_id": "19165a44", "task_type": "task", "cost_usd": 0.03817, "total_rounds": 14, "prompt_tokens": 192057, "completion_tokens": 3542}
++{"ts": "2026-03-24T13:22:19.479157+00:00", "type": "llm_usage", "task_id": "19165a44", "category": "task", "model": "google/gemini-2.5-pro-preview", "cost": 0.02127125, "prompt_tokens": 12753, "completion_tokens": 533}
++{"ts": "2026-03-24T13:23:33.390259+00:00", "type": "consciousness_thought", "thought_preview": "", "cost_usd": 0.0, "rounds": 1, "model": "nvidia/nemotron-3-super-120b-a12b:free"}
++{"ts": "2026-03-24T13:23:33.390170+00:00", "type": "llm_usage", "task_id": "", "category": "consciousness", "model": "", "cost": 0, "prompt_tokens": 5864, "completion_tokens": 65}
+diff --git a/local_state/logs/supervisor.jsonl b/local_state/logs/supervisor.jsonl
+index 0aade57..a136e6e 100644
+--- a/local_state/logs/supervisor.jsonl
++++ b/local_state/logs/supervisor.jsonl
+@@ -30,3 +30,23 @@
+ {"ts": "2026-03-24T13:18:20.105445+00:00", "type": "deps_sync_ok", "reason": "bootstrap", "source": "requirements:/Users/godmode/Documents/ouroboros-new/requirements.txt"}
+ {"ts": "2026-03-24T13:18:20.148085+00:00", "type": "worker_spawn_start", "start_method": "spawn", "count": 2}
+ {"ts": "2026-03-24T13:18:20.151934+00:00", "type": "launcher_start", "branch": "ouroboros", "sha": "1d9af57c4310bb703472d6dfbf2e3c29ff2570b3", "max_workers": 2, "model_default": "nvidia/nemotron-3-super-120b-a12b:free", "model_code": "nvidia/nemotron-3-super-120b-a12b:free", "model_light": "nvidia/nemotron-3-super-120b-a12b:free", "soft_timeout_sec": 600, "hard_timeout_sec": 1800, "diag_heartbeat_sec": 30, "diag_slow_cycle_sec": 20}
++{"ts": "2026-03-24T13:18:22.440219+00:00", "type": "worker_sha_verify", "ok": true, "expected_sha": "1d9af57c4310bb703472d6dfbf2e3c29ff2570b3", "observed_sha": "1d9af57c4310bb703472d6dfbf2e3c29ff2570b3", "worker_pid": 28246}
++{"ts": "2026-03-24T13:18:23.116361+00:00", "type": "auto_resume_triggered"}
++{"ts": "2026-03-24T13:18:25.154153+00:00", "type": "main_loop_heartbeat", "offset": 658045649, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0}
++{"ts": "2026-03-24T13:18:56.407215+00:00", "type": "main_loop_heartbeat", "offset": 658045649, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0}
++{"ts": "2026-03-24T13:19:29.769205+00:00", "type": "main_loop_heartbeat", "offset": 658045660, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0}
++{"ts": "2026-03-24T13:19:50.850720+00:00", "type": "worker_dead_detected", "worker_id": 0, "exitcode": 0, "busy_task_id": null}
++{"ts": "2026-03-24T13:19:50.859726+00:00", "type": "worker_dead_detected", "worker_id": 1, "exitcode": 0, "busy_task_id": null}
++{"ts": "2026-03-24T13:20:01.207959+00:00", "type": "main_loop_heartbeat", "offset": 658045660, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0}
++{"ts": "2026-03-24T13:20:32.615758+00:00", "type": "main_loop_heartbeat", "offset": 658045660, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0}
++{"ts": "2026-03-24T13:21:04.595579+00:00", "type": "main_loop_heartbeat", "offset": 658045660, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0}
++{"ts": "2026-03-24T13:21:21.497105+00:00", "type": "worker_dead_detected", "worker_id": 0, "exitcode": 0, "busy_task_id": null}
++{"ts": "2026-03-24T13:21:21.504814+00:00", "type": "worker_dead_detected", "worker_id": 1, "exitcode": 0, "busy_task_id": null}
++{"ts": "2026-03-24T13:21:37.154952+00:00", "type": "main_loop_heartbeat", "offset": 658045661, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0}
++{"ts": "2026-03-24T13:22:07.206551+00:00", "type": "main_loop_heartbeat", "offset": 658045661, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.01689875}
++{"ts": "2026-03-24T13:22:27.468589+00:00", "type": "task_metrics_event", "task_id": "19165a44", "task_type": "task", "duration_sec": 236.364, "tool_calls": 13, "tool_errors": 0}
++{"ts": "2026-03-24T13:22:38.188896+00:00", "type": "main_loop_heartbeat", "offset": 658045661, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.038169999999999996}
++{"ts": "2026-03-24T13:22:53.856751+00:00", "type": "worker_dead_detected", "worker_id": 0, "exitcode": 0, "busy_task_id": null}
++{"ts": "2026-03-24T13:22:53.863853+00:00", "type": "worker_dead_detected", "worker_id": 1, "exitcode": 0, "busy_task_id": null}
++{"ts": "2026-03-24T13:23:09.987506+00:00", "type": "main_loop_heartbeat", "offset": 658045661, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.038169999999999996}
++{"ts": "2026-03-24T13:23:42.247444+00:00", "type": "main_loop_heartbeat", "offset": 658045661, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.038169999999999996}
+diff --git a/local_state/state/queue_snapshot.json b/local_state/state/queue_snapshot.json
+index afa023c..4c040da 100644
+--- a/local_state/state/queue_snapshot.json
++++ b/local_state/state/queue_snapshot.json
+@@ -1,6 +1,6 @@
+ {
+-  "ts": "2026-03-24T13:18:20.151232+00:00",
+-  "reason": "startup",
++  "ts": "2026-03-24T13:23:50.677420+00:00",
++  "reason": "main_loop",
+   "pending_count": 0,
+   "running_count": 0,
+   "pending": [],
+diff --git a/local_state/state/state.json b/local_state/state/state.json
+index bfcf7a9..9966e47 100644
+--- a/local_state/state/state.json
++++ b/local_state/state/state.json
+@@ -2,26 +2,26 @@
+   "created_at": "2026-03-24T12:30:50.401248+00:00",
+   "owner_id": 1262547540,
+   "owner_chat_id": 1262547540,
+-  "tg_offset": 658045649,
+-  "spent_usd": 0.0,
+-  "spent_calls": 0,
+-  "spent_tokens_prompt": 0,
+-  "spent_tokens_completion": 0,
++  "tg_offset": 658045662,
++  "spent_usd": 0.038169999999999996,
++  "spent_calls": 16,
++  "spent_tokens_prompt": 203785,
++  "spent_tokens_completion": 3672,
+   "spent_tokens_cached": 0,
+   "session_id": "373a82a6ae2f4b36b42e8f4efb014519",
+   "current_branch": "ouroboros",
+   "current_sha": "1d9af57c4310bb703472d6dfbf2e3c29ff2570b3",
+-  "last_owner_message_at": "2026-03-24T12:33:10.912115+00:00",
++  "last_owner_message_at": "2026-03-24T13:23:45.462038+00:00",
+   "last_evolution_task_at": "",
+-  "budget_messages_since_report": 1,
++  "budget_messages_since_report": 8,
+   "evolution_mode_enabled": false,
+   "evolution_cycle": 0,
+-  "session_total_snapshot": 7.041616125,
+-  "session_spent_snapshot": 0.0,
++  "session_total_snapshot": 7.5971283,
++  "session_spent_snapshot": 0.038169999999999996,
+   "budget_drift_pct": null,
+   "budget_drift_alert": false,
+   "evolution_consecutive_failures": 0,
+-  "openrouter_total_usd": 7.041616125,
+-  "openrouter_daily_usd": 3.13429375,
+-  "openrouter_last_check_at": "2026-03-24T12:31:25.748326+00:00"
++  "openrouter_total_usd": 7.5971283,
++  "openrouter_daily_usd": 3.689805925,
++  "openrouter_last_check_at": "2026-03-24T13:23:54.967799+00:00"
+ }
+\ No newline at end of file
+diff --git a/local_state/state/state.last_good.json b/local_state/state/state.last_good.json
+index bfcf7a9..9966e47 100644
+--- a/local_state/state/state.last_good.json
++++ b/local_state/state/state.last_good.json
+@@ -2,26 +2,26 @@
+   "created_at": "2026-03-24T12:30:50.401248+00:00",
+   "owner_id": 1262547540,
+   "owner_chat_id": 1262547540,
+-  "tg_offset": 658045649,
+-  "spent_usd": 0.0,
+-  "spent_calls": 0,
+-  "spent_tokens_prompt": 0,
+-  "spent_tokens_completion": 0,
++  "tg_offset": 658045662,
++  "spent_usd": 0.038169999999999996,
++  "spent_calls": 16,
++  "spent_tokens_prompt": 203785,
++  "spent_tokens_completion": 3672,
+   "spent_tokens_cached": 0,
+   "session_id": "373a82a6ae2f4b36b42e8f4efb014519",
+   "current_branch": "ouroboros",
+   "current_sha": "1d9af57c4310bb703472d6dfbf2e3c29ff2570b3",
+-  "last_owner_message_at": "2026-03-24T12:33:10.912115+00:00",
++  "last_owner_message_at": "2026-03-24T13:23:45.462038+00:00",
+   "last_evolution_task_at": "",
+-  "budget_messages_since_report": 1,
++  "budget_messages_since_report": 8,
+   "evolution_mode_enabled": false,
+   "evolution_cycle": 0,
+-  "session_total_snapshot": 7.041616125,
+-  "session_spent_snapshot": 0.0,
++  "session_total_snapshot": 7.5971283,
++  "session_spent_snapshot": 0.038169999999999996,
+   "budget_drift_pct": null,
+   "budget_drift_alert": false,
+   "evolution_consecutive_failures": 0,
+-  "openrouter_total_usd": 7.041616125,
+-  "openrouter_daily_usd": 3.13429375,
+-  "openrouter_last_check_at": "2026-03-24T12:31:25.748326+00:00"
++  "openrouter_total_usd": 7.5971283,
++  "openrouter_daily_usd": 3.689805925,
++  "openrouter_last_check_at": "2026-03-24T13:23:54.967799+00:00"
+ }
+\ No newline at end of file

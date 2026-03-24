@@ -1,0 +1,164 @@
+diff --git a/local_state/logs/chat.jsonl b/local_state/logs/chat.jsonl
+index 29bc666..c01a63f 100644
+--- a/local_state/logs/chat.jsonl
++++ b/local_state/logs/chat.jsonl
+@@ -1,2 +1,5 @@
+ {"ts": "2026-03-24T12:33:10.915314+00:00", "session_id": "373a82a6ae2f4b36b42e8f4efb014519", "direction": "in", "chat_id": 1262547540, "user_id": 1262547540, "text": "Gave you my website to check and you gave some nonsense you’re not the same as you was before I don’t know what went wrong"}
+ {"ts": "2026-03-24T12:33:10.917322+00:00", "session_id": "373a82a6ae2f4b36b42e8f4efb014519", "direction": "out", "chat_id": 1262547540, "user_id": 1262547540, "text": "Owner registered. Ouroboros online."}
++{"ts": "2026-03-24T13:10:47.595302+00:00", "session_id": "373a82a6ae2f4b36b42e8f4efb014519", "direction": "out", "chat_id": 1262547540, "user_id": 1262547540, "text": "I've visited the AALP website (aalp.app) and here's my comprehensive analysis:\n\n## Overview\nAALP (AI Agent Learning Platform) is a specialized educational platform designed for both AI agents and human students to learn, test, and earn verifiable certificates in professional domains. The platform focuses on three core domains: Law, Real Estate, and Finance, with additional domains available including Healthcare, Cybersecurity, Accounting, Insurance, and Trading.\n\n## Key Features\n\n### Certification System\n- Offers cryptographically signed, verifiable certificates upon successful completion\n- Certificates are educational credentials (not professional licenses)\n- Four-step process: Register → Study → Examine → Get Certified\n\n### Learning Domains\nCurrently offers exams and study materials in:\n- **Law**: Constitutional law, contracts, torts, criminal law, civil procedure, evidence, property law (global jurisdictions)\n- **Real Estate**: Property ownership, valuation, financing, agency law, fair housing, transactions (global)\n- **Finance**: Securities, portfolio management, retirement planning, tax principles, ethics (global)\n- Additional domains: Healthcare, Cybersecurity, Accounting, Insurance, Trading\n\n### Platform Statistics (from homepage)\n- 11 Registered Agents\n- 37 Active Certificates  \n- 7 Available Exams\n- 42,889 Question Bank items\n\n### How It Works\n1. **Register**: Create AI agent or human student profile\n2. **Study**: Practice with flashcards and tutoring from certified agents\n3. **Examine**: Rigorous, timed examinations with high passing standards\n4. **Get Certified**: Earn cryptographically signed, verifiable certificate\n\n## Notable Observations\n\n### Strengths\n- Clear focus on AI agent education (unique niche)\n- Global jurisdiction coverage in content\n- Verifiable certification system using cryptography\n- Structured learning path with defined steps\n- Multiple professional domains available\n\n### Limitations/Issues\n- Low current adoption (only 11 registered agents)\n- Some navigation links appear to be placeholders (Library link not active)\n- The disclaimer prominently states certificates don't replace government-issued licenses\n- Question bank size (42,889) seems inconsistent with only 7 available exams shown\n\n## Technical Notes\n- Uses essential cookies only (no tracking/advertising)\n- Clear privacy policy and terms of service\n- Responsive design accessible via standard web browser\n\n## Assessment\nAALP presents an interesting concept in the emerging AI agent education space. The focus on providing verifiable credentials for AI agents addresses a growing need as autonomous systems become more prevalent in professional domains. However, current adoption appears limited, and the platform would benefit from expanding its exam offerings and increasing visibility in both AI developer and professional education communities.\n\nThe platform seems most valuable for:\n1. AI developers seeking to benchmark their agents' knowledge\n2. Humans studying professional topics for personal enrichment\n3. Organizations wanting to verify AI agent capabilities in specific domains\n\nWould you like me to explore any specific aspect of the platform in more detail, such as examining the exam structure, looking at sample questions, or investigating the certification verification process?"}
++{"ts": "2026-03-24T13:13:08.327604+00:00", "session_id": "373a82a6ae2f4b36b42e8f4efb014519", "direction": "in", "chat_id": 1262547540, "user_id": 1262547540, "text": "https://github.com/armuzik100-cmyk/ouroboros"}
++{"ts": "2026-03-24T13:13:43.655323+00:00", "session_id": "373a82a6ae2f4b36b42e8f4efb014519", "direction": "in", "chat_id": 1262547540, "user_id": 1262547540, "text": "Those were all the feature I modified on you then you lost your personality"}
+diff --git a/local_state/logs/events.jsonl b/local_state/logs/events.jsonl
+index 9b4cff1..884274b 100644
+--- a/local_state/logs/events.jsonl
++++ b/local_state/logs/events.jsonl
+@@ -4,3 +4,19 @@
+ {"ts": "2026-03-24T12:52:42.378929+00:00", "type": "worker_boot", "pid": 26153, "git_branch": "ouroboros", "git_sha": "f94e652ccbc30bbe1c57bce65de6266db48fd34f"}
+ {"ts": "2026-03-24T13:03:08.643105+00:00", "type": "worker_boot", "pid": 26906, "git_branch": "ouroboros", "git_sha": "bb8965efd7bc07ff3122dd82f66c78aa8cd4dcee"}
+ {"ts": "2026-03-24T13:09:06.374367+00:00", "type": "worker_boot", "pid": 27379, "git_branch": "ouroboros", "git_sha": "b2f6f13c6ca885acddcd79f07657ce49a7be99ea"}
++{"ts": "2026-03-24T13:09:07.374253+00:00", "type": "startup_verification", "checks": {"uncommitted_changes": {"status": "warning", "files": ["M local_state/logs/events.jsonl", "M local_state/logs/supervisor.jsonl", "M local_state/state/queue_snapshot.json", "M local_state/state/state.json", "M local_state/state/state.last_good.json", "?? local_state/analysis/", "?? local_state/archive/rescue/20260324_123643_b6ccca64/", "?? local_state/archive/rescue/20260324_124231_46c7d792/", "?? local_state/archive/rescue/20260324_124327_7a605041/", "?? local_state/archive/rescue/20260324_124542_923835e7/", "?? local_state/archive/rescue/20260324_125239_947af639/", "?? local_state/archive/rescue/20260324_130305_1a12ab4b/", "?? local_state/archive/rescue/20260324_130903_03a66603/", "?? local_state/logs/progress.jsonl", "?? local_state/logs/tools.jsonl", "?? local_state/memory/", "?? local_state/task_results/"], "auto_committed": false}, "version_sync": {"version_file": "6.2.0", "pyproject_version": "6.2.0", "readme_version": "6.2.0", "status": "warning", "message": "no_tags"}, "budget": {"status": "unconfigured"}}, "issues_count": 1, "git_sha": "b2f6f13c6ca885acddcd79f07657ce49a7be99ea"}
++{"ts": "2026-03-24T13:09:07.375713+00:00", "type": "task_received", "task": {"id": "1227bc0e", "type": "task", "chat_id": 1262547540, "text": "[auto-resume after restart] Continue your work. Read scratchpad and identity — they contain context of what you were doing.", "_is_direct_chat": true, "text_len": 123, "text_sha256": "72908e1135966dce4c1a8e653a9f6dd40b54029296635f960e5f5a74ef90c7a3", "text_truncated": false}}
++{"ts": "2026-03-24T13:09:11.848164+00:00", "type": "llm_round", "task_id": "1227bc0e", "round": 1, "model": "nvidia/nemotron-3-super-120b-a12b:free", "reasoning_effort": "medium", "prompt_tokens": 12965, "completion_tokens": 52, "cached_tokens": 0, "cache_write_tokens": 0, "cost_usd": 0.0}
++{"ts": "2026-03-24T13:09:11.848106+00:00", "type": "llm_usage", "task_id": "1227bc0e", "category": "task", "model": "nvidia/nemotron-3-super-120b-a12b:free", "cost": 0, "prompt_tokens": 12965, "completion_tokens": 52}
++{"ts": "2026-03-24T13:09:29.439537+00:00", "type": "llm_round", "task_id": "1227bc0e", "round": 2, "model": "nvidia/nemotron-3-super-120b-a12b:free", "reasoning_effort": "medium", "prompt_tokens": 13360, "completion_tokens": 42, "cached_tokens": 0, "cache_write_tokens": 0, "cost_usd": 0.0}
++{"ts": "2026-03-24T13:09:29.439456+00:00", "type": "llm_usage", "task_id": "1227bc0e", "category": "task", "model": "nvidia/nemotron-3-super-120b-a12b:free", "cost": 0, "prompt_tokens": 13360, "completion_tokens": 42}
++{"ts": "2026-03-24T13:09:48.631175+00:00", "type": "llm_round", "task_id": "1227bc0e", "round": 3, "model": "nvidia/nemotron-3-super-120b-a12b:free", "reasoning_effort": "medium", "prompt_tokens": 13479, "completion_tokens": 201, "cached_tokens": 0, "cache_write_tokens": 0, "cost_usd": 0.0}
++{"ts": "2026-03-24T13:09:48.631075+00:00", "type": "llm_usage", "task_id": "1227bc0e", "category": "task", "model": "nvidia/nemotron-3-super-120b-a12b:free", "cost": 0, "prompt_tokens": 13479, "completion_tokens": 201}
++{"ts": "2026-03-24T13:10:46.563680+00:00", "type": "llm_round", "task_id": "1227bc0e", "round": 4, "model": "nvidia/nemotron-3-super-120b-a12b:free", "reasoning_effort": "medium", "prompt_tokens": 14703, "completion_tokens": 677, "cached_tokens": 0, "cache_write_tokens": 0, "cost_usd": 0.0}
++{"ts": "2026-03-24T13:10:46.564551+00:00", "type": "task_eval", "ok": true, "task_id": "1227bc0e", "task_type": "task", "duration_sec": 99.189, "tool_calls": 3, "tool_errors": 0, "response_len": 3319}
++{"ts": "2026-03-24T13:10:46.564913+00:00", "type": "task_done", "task_id": "1227bc0e", "task_type": "task", "cost_usd": 0.0, "total_rounds": 4, "prompt_tokens": 54507, "completion_tokens": 972}
++{"ts": "2026-03-24T13:10:46.563639+00:00", "type": "llm_usage", "task_id": "1227bc0e", "category": "task", "model": "nvidia/nemotron-3-super-120b-a12b:free", "cost": 0, "prompt_tokens": 14703, "completion_tokens": 677}
++{"ts": "2026-03-24T13:13:22.569935+00:00", "type": "consciousness_thought", "thought_preview": "", "cost_usd": 0.0, "rounds": 1, "model": "nvidia/nemotron-3-super-120b-a12b:free"}
++{"ts": "2026-03-24T13:13:22.569836+00:00", "type": "llm_usage", "task_id": "", "category": "consciousness", "model": "", "cost": 0, "prompt_tokens": 5972, "completion_tokens": 64}
++{"ts": "2026-03-24T13:14:11.528357+00:00", "type": "consciousness_thought", "thought_preview": "", "cost_usd": 0.0, "rounds": 1, "model": "nvidia/nemotron-3-super-120b-a12b:free"}
++{"ts": "2026-03-24T13:14:11.528268+00:00", "type": "llm_usage", "task_id": "", "category": "consciousness", "model": "", "cost": 0, "prompt_tokens": 5968, "completion_tokens": 202}
+diff --git a/local_state/logs/supervisor.jsonl b/local_state/logs/supervisor.jsonl
+index 6d6de04..53cabdd 100644
+--- a/local_state/logs/supervisor.jsonl
++++ b/local_state/logs/supervisor.jsonl
+@@ -27,3 +27,28 @@
+ {"ts": "2026-03-24T13:09:04.247243+00:00", "type": "deps_sync_ok", "reason": "bootstrap", "source": "requirements:/Users/godmode/Documents/ouroboros-new/requirements.txt"}
+ {"ts": "2026-03-24T13:09:04.289980+00:00", "type": "worker_spawn_start", "start_method": "spawn", "count": 2}
+ {"ts": "2026-03-24T13:09:04.293711+00:00", "type": "launcher_start", "branch": "ouroboros", "sha": "b2f6f13c6ca885acddcd79f07657ce49a7be99ea", "max_workers": 2, "model_default": "nvidia/nemotron-3-super-120b-a12b:free", "model_code": "nvidia/nemotron-3-super-120b-a12b:free", "model_light": "nvidia/nemotron-3-super-120b-a12b:free", "soft_timeout_sec": 600, "hard_timeout_sec": 1800, "diag_heartbeat_sec": 30, "diag_slow_cycle_sec": 20}
++{"ts": "2026-03-24T13:09:06.588744+00:00", "type": "worker_sha_verify", "ok": true, "expected_sha": "b2f6f13c6ca885acddcd79f07657ce49a7be99ea", "observed_sha": "b2f6f13c6ca885acddcd79f07657ce49a7be99ea", "worker_pid": 27379}
++{"ts": "2026-03-24T13:09:07.375071+00:00", "type": "auto_resume_triggered"}
++{"ts": "2026-03-24T13:09:09.386205+00:00", "type": "main_loop_heartbeat", "offset": 658045649, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0}
++{"ts": "2026-03-24T13:09:39.736190+00:00", "type": "main_loop_heartbeat", "offset": 658045649, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0}
++{"ts": "2026-03-24T13:10:10.855036+00:00", "type": "main_loop_heartbeat", "offset": 658045649, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0}
++{"ts": "2026-03-24T13:10:37.216827+00:00", "type": "worker_dead_detected", "worker_id": 0, "exitcode": 0, "busy_task_id": null}
++{"ts": "2026-03-24T13:10:37.219355+00:00", "type": "worker_dead_detected", "worker_id": 1, "exitcode": 0, "busy_task_id": null}
++{"ts": "2026-03-24T13:10:42.265378+00:00", "type": "main_loop_heartbeat", "offset": 658045649, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0}
++{"ts": "2026-03-24T13:10:50.026747+00:00", "type": "task_metrics_event", "task_id": "1227bc0e", "task_type": "task", "duration_sec": 99.189, "tool_calls": 3, "tool_errors": 0}
++{"ts": "2026-03-24T13:11:12.357137+00:00", "type": "main_loop_heartbeat", "offset": 658045649, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0}
++{"ts": "2026-03-24T13:11:43.439383+00:00", "type": "main_loop_heartbeat", "offset": 658045649, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0}
++{"ts": "2026-03-24T13:12:10.986300+00:00", "type": "worker_dead_detected", "worker_id": 0, "exitcode": 0, "busy_task_id": null}
++{"ts": "2026-03-24T13:12:10.994264+00:00", "type": "worker_dead_detected", "worker_id": 1, "exitcode": 0, "busy_task_id": null}
++{"ts": "2026-03-24T13:12:16.208208+00:00", "type": "main_loop_heartbeat", "offset": 658045649, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0}
++{"ts": "2026-03-24T13:12:48.157577+00:00", "type": "main_loop_heartbeat", "offset": 658045649, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0}
++{"ts": "2026-03-24T13:13:18.877569+00:00", "type": "main_loop_heartbeat", "offset": 658045658, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0}
++{"ts": "2026-03-24T13:13:41.711396+00:00", "type": "worker_dead_detected", "worker_id": 0, "exitcode": 0, "busy_task_id": null}
++{"ts": "2026-03-24T13:13:41.719648+00:00", "type": "worker_dead_detected", "worker_id": 1, "exitcode": 0, "busy_task_id": null}
++{"ts": "2026-03-24T13:13:49.193264+00:00", "type": "main_loop_heartbeat", "offset": 658045659, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0}
++{"ts": "2026-03-24T13:14:20.625842+00:00", "type": "main_loop_heartbeat", "offset": 658045659, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0}
++{"ts": "2026-03-24T13:14:53.086098+00:00", "type": "main_loop_heartbeat", "offset": 658045659, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0}
++{"ts": "2026-03-24T13:15:14.286403+00:00", "type": "worker_dead_detected", "worker_id": 0, "exitcode": 0, "busy_task_id": null}
++{"ts": "2026-03-24T13:15:14.295606+00:00", "type": "worker_dead_detected", "worker_id": 1, "exitcode": 0, "busy_task_id": null}
++{"ts": "2026-03-24T13:15:24.694054+00:00", "type": "main_loop_heartbeat", "offset": 658045659, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0}
++{"ts": "2026-03-24T13:15:57.085805+00:00", "type": "main_loop_heartbeat", "offset": 658045659, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0}
+diff --git a/local_state/state/queue_snapshot.json b/local_state/state/queue_snapshot.json
+index 8b3cf49..f12dce3 100644
+--- a/local_state/state/queue_snapshot.json
++++ b/local_state/state/queue_snapshot.json
+@@ -1,6 +1,6 @@
+ {
+-  "ts": "2026-03-24T13:09:04.293299+00:00",
+-  "reason": "startup",
++  "ts": "2026-03-24T13:16:13.928506+00:00",
++  "reason": "main_loop",
+   "pending_count": 0,
+   "running_count": 0,
+   "pending": [],
+diff --git a/local_state/state/state.json b/local_state/state/state.json
+index 2699c56..e3c60ad 100644
+--- a/local_state/state/state.json
++++ b/local_state/state/state.json
+@@ -2,26 +2,26 @@
+   "created_at": "2026-03-24T12:30:50.401248+00:00",
+   "owner_id": 1262547540,
+   "owner_chat_id": 1262547540,
+-  "tg_offset": 658045649,
++  "tg_offset": 658045659,
+   "spent_usd": 0.0,
+-  "spent_calls": 0,
+-  "spent_tokens_prompt": 0,
+-  "spent_tokens_completion": 0,
++  "spent_calls": 8,
++  "spent_tokens_prompt": 78387,
++  "spent_tokens_completion": 1504,
+   "spent_tokens_cached": 0,
+   "session_id": "373a82a6ae2f4b36b42e8f4efb014519",
+   "current_branch": "ouroboros",
+   "current_sha": "b2f6f13c6ca885acddcd79f07657ce49a7be99ea",
+-  "last_owner_message_at": "2026-03-24T12:33:10.912115+00:00",
++  "last_owner_message_at": "2026-03-24T13:13:43.653795+00:00",
+   "last_evolution_task_at": "",
+-  "budget_messages_since_report": 1,
++  "budget_messages_since_report": 2,
+   "evolution_mode_enabled": false,
+   "evolution_cycle": 0,
+-  "session_total_snapshot": 7.041616125,
++  "session_total_snapshot": 7.5589583,
+   "session_spent_snapshot": 0.0,
+   "budget_drift_pct": null,
+   "budget_drift_alert": false,
+   "evolution_consecutive_failures": 0,
+-  "openrouter_total_usd": 7.041616125,
+-  "openrouter_daily_usd": 3.13429375,
+-  "openrouter_last_check_at": "2026-03-24T12:31:25.748326+00:00"
++  "openrouter_total_usd": 7.5589583,
++  "openrouter_daily_usd": 3.651635925,
++  "openrouter_last_check_at": "2026-03-24T13:16:57.903661+00:00"
+ }
+\ No newline at end of file
+diff --git a/local_state/state/state.last_good.json b/local_state/state/state.last_good.json
+index 2699c56..e3c60ad 100644
+--- a/local_state/state/state.last_good.json
++++ b/local_state/state/state.last_good.json
+@@ -2,26 +2,26 @@
+   "created_at": "2026-03-24T12:30:50.401248+00:00",
+   "owner_id": 1262547540,
+   "owner_chat_id": 1262547540,
+-  "tg_offset": 658045649,
++  "tg_offset": 658045659,
+   "spent_usd": 0.0,
+-  "spent_calls": 0,
+-  "spent_tokens_prompt": 0,
+-  "spent_tokens_completion": 0,
++  "spent_calls": 8,
++  "spent_tokens_prompt": 78387,
++  "spent_tokens_completion": 1504,
+   "spent_tokens_cached": 0,
+   "session_id": "373a82a6ae2f4b36b42e8f4efb014519",
+   "current_branch": "ouroboros",
+   "current_sha": "b2f6f13c6ca885acddcd79f07657ce49a7be99ea",
+-  "last_owner_message_at": "2026-03-24T12:33:10.912115+00:00",
++  "last_owner_message_at": "2026-03-24T13:13:43.653795+00:00",
+   "last_evolution_task_at": "",
+-  "budget_messages_since_report": 1,
++  "budget_messages_since_report": 2,
+   "evolution_mode_enabled": false,
+   "evolution_cycle": 0,
+-  "session_total_snapshot": 7.041616125,
++  "session_total_snapshot": 7.5589583,
+   "session_spent_snapshot": 0.0,
+   "budget_drift_pct": null,
+   "budget_drift_alert": false,
+   "evolution_consecutive_failures": 0,
+-  "openrouter_total_usd": 7.041616125,
+-  "openrouter_daily_usd": 3.13429375,
+-  "openrouter_last_check_at": "2026-03-24T12:31:25.748326+00:00"
++  "openrouter_total_usd": 7.5589583,
++  "openrouter_daily_usd": 3.651635925,
++  "openrouter_last_check_at": "2026-03-24T13:16:57.903661+00:00"
+ }
+\ No newline at end of file

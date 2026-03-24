@@ -1,0 +1,116 @@
+diff --git a/local_state/logs/events.jsonl b/local_state/logs/events.jsonl
+index f5ed72d..fba6a70 100644
+--- a/local_state/logs/events.jsonl
++++ b/local_state/logs/events.jsonl
+@@ -5,3 +5,15 @@
+ {"ts": "2026-03-24T13:03:08.643105+00:00", "type": "worker_boot", "pid": 26906, "git_branch": "ouroboros", "git_sha": "bb8965efd7bc07ff3122dd82f66c78aa8cd4dcee"}
+ {"ts": "2026-03-24T13:09:06.374367+00:00", "type": "worker_boot", "pid": 27379, "git_branch": "ouroboros", "git_sha": "b2f6f13c6ca885acddcd79f07657ce49a7be99ea"}
+ {"ts": "2026-03-24T13:17:02.179049+00:00", "type": "worker_boot", "pid": 28063, "git_branch": "ouroboros", "git_sha": "1d9af57c4310bb703472d6dfbf2e3c29ff2570b3"}
++{"ts": "2026-03-24T13:17:02.924301+00:00", "type": "startup_verification", "checks": {"uncommitted_changes": {"status": "warning", "files": ["M local_state/logs/events.jsonl", "M local_state/logs/supervisor.jsonl", "M local_state/state/queue_snapshot.json", "M local_state/state/state.json", "M local_state/state/state.last_good.json", "?? local_state/analysis/", "?? local_state/archive/rescue/20260324_123643_b6ccca64/", "?? local_state/archive/rescue/20260324_124231_46c7d792/", "?? local_state/archive/rescue/20260324_124327_7a605041/", "?? local_state/archive/rescue/20260324_124542_923835e7/", "?? local_state/archive/rescue/20260324_125239_947af639/", "?? local_state/archive/rescue/20260324_130305_1a12ab4b/", "?? local_state/archive/rescue/20260324_130903_03a66603/", "?? local_state/archive/rescue/20260324_131659_2cb03593/", "?? local_state/logs/progress.jsonl", "?? local_state/logs/tools.jsonl", "?? local_state/memory/", "?? local_state/task_results/"], "auto_committed": false}, "version_sync": {"version_file": "6.2.0", "pyproject_version": "6.2.0", "readme_version": "6.2.0", "status": "warning", "message": "no_tags"}, "budget": {"status": "unconfigured"}}, "issues_count": 1, "git_sha": "1d9af57c4310bb703472d6dfbf2e3c29ff2570b3"}
++{"ts": "2026-03-24T13:17:02.925518+00:00", "type": "task_received", "task": {"id": "231fd4d9", "type": "task", "chat_id": 1262547540, "text": "[auto-resume after restart] Continue your work. Read scratchpad and identity — they contain context of what you were doing.", "_is_direct_chat": true, "text_len": 123, "text_sha256": "72908e1135966dce4c1a8e653a9f6dd40b54029296635f960e5f5a74ef90c7a3", "text_truncated": false}}
++{"ts": "2026-03-24T13:17:15.046790+00:00", "type": "llm_round", "task_id": "231fd4d9", "round": 1, "model": "nvidia/nemotron-3-super-120b-a12b:free", "reasoning_effort": "medium", "prompt_tokens": 12969, "completion_tokens": 51, "cached_tokens": 0, "cache_write_tokens": 0, "cost_usd": 0.0}
++{"ts": "2026-03-24T13:17:15.046745+00:00", "type": "llm_usage", "task_id": "231fd4d9", "category": "task", "model": "nvidia/nemotron-3-super-120b-a12b:free", "cost": 0, "prompt_tokens": 12969, "completion_tokens": 51}
++{"ts": "2026-03-24T13:17:18.148216+00:00", "type": "llm_round", "task_id": "231fd4d9", "round": 2, "model": "nvidia/nemotron-3-super-120b-a12b:free", "reasoning_effort": "medium", "prompt_tokens": 13364, "completion_tokens": 49, "cached_tokens": 0, "cache_write_tokens": 0, "cost_usd": 0.0}
++{"ts": "2026-03-24T13:17:18.148184+00:00", "type": "llm_usage", "task_id": "231fd4d9", "category": "task", "model": "nvidia/nemotron-3-super-120b-a12b:free", "cost": 0, "prompt_tokens": 13364, "completion_tokens": 49}
++{"ts": "2026-03-24T13:17:27.126675+00:00", "type": "llm_round", "task_id": "231fd4d9", "round": 3, "model": "nvidia/nemotron-3-super-120b-a12b:free", "reasoning_effort": "medium", "prompt_tokens": 13483, "completion_tokens": 69, "cached_tokens": 0, "cache_write_tokens": 0, "cost_usd": 0.0}
++{"ts": "2026-03-24T13:17:27.126597+00:00", "type": "llm_usage", "task_id": "231fd4d9", "category": "task", "model": "nvidia/nemotron-3-super-120b-a12b:free", "cost": 0, "prompt_tokens": 13483, "completion_tokens": 69}
++{"ts": "2026-03-24T13:17:43.546930+00:00", "type": "llm_round", "task_id": "231fd4d9", "round": 4, "model": "nvidia/nemotron-3-super-120b-a12b:free", "reasoning_effort": "medium", "prompt_tokens": 14707, "completion_tokens": 82, "cached_tokens": 0, "cache_write_tokens": 0, "cost_usd": 0.0}
++{"ts": "2026-03-24T13:17:43.546905+00:00", "type": "llm_usage", "task_id": "231fd4d9", "category": "task", "model": "nvidia/nemotron-3-super-120b-a12b:free", "cost": 0, "prompt_tokens": 14707, "completion_tokens": 82}
++{"ts": "2026-03-24T13:17:48.984905+00:00", "type": "llm_round", "task_id": "231fd4d9", "round": 5, "model": "nvidia/nemotron-3-super-120b-a12b:free", "reasoning_effort": "medium", "prompt_tokens": 19386, "completion_tokens": 63, "cached_tokens": 0, "cache_write_tokens": 0, "cost_usd": 0.0}
++{"ts": "2026-03-24T13:17:48.984870+00:00", "type": "llm_usage", "task_id": "231fd4d9", "category": "task", "model": "nvidia/nemotron-3-super-120b-a12b:free", "cost": 0, "prompt_tokens": 19386, "completion_tokens": 63}
+diff --git a/local_state/logs/supervisor.jsonl b/local_state/logs/supervisor.jsonl
+index 7b2dbc6..d5a9b22 100644
+--- a/local_state/logs/supervisor.jsonl
++++ b/local_state/logs/supervisor.jsonl
+@@ -30,3 +30,8 @@
+ {"ts": "2026-03-24T13:17:00.045703+00:00", "type": "deps_sync_ok", "reason": "bootstrap", "source": "requirements:/Users/godmode/Documents/ouroboros-new/requirements.txt"}
+ {"ts": "2026-03-24T13:17:00.086596+00:00", "type": "worker_spawn_start", "start_method": "spawn", "count": 2}
+ {"ts": "2026-03-24T13:17:00.089964+00:00", "type": "launcher_start", "branch": "ouroboros", "sha": "1d9af57c4310bb703472d6dfbf2e3c29ff2570b3", "max_workers": 2, "model_default": "nvidia/nemotron-3-super-120b-a12b:free", "model_code": "nvidia/nemotron-3-super-120b-a12b:free", "model_light": "nvidia/nemotron-3-super-120b-a12b:free", "soft_timeout_sec": 600, "hard_timeout_sec": 1800, "diag_heartbeat_sec": 30, "diag_slow_cycle_sec": 20}
++{"ts": "2026-03-24T13:17:02.380350+00:00", "type": "worker_sha_verify", "ok": true, "expected_sha": "1d9af57c4310bb703472d6dfbf2e3c29ff2570b3", "observed_sha": "1d9af57c4310bb703472d6dfbf2e3c29ff2570b3", "worker_pid": 28063}
++{"ts": "2026-03-24T13:17:02.924949+00:00", "type": "auto_resume_triggered"}
++{"ts": "2026-03-24T13:17:04.979461+00:00", "type": "main_loop_heartbeat", "offset": 658045649, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0}
++{"ts": "2026-03-24T13:17:36.038573+00:00", "type": "main_loop_heartbeat", "offset": 658045649, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0}
++{"ts": "2026-03-24T13:18:06.627086+00:00", "type": "main_loop_heartbeat", "offset": 658045649, "workers_total": 2, "workers_alive": 0, "pending_count": 0, "running_count": 0, "event_q_size": -1, "running_task_ids": [], "spent_usd": 0.0}
+diff --git a/local_state/state/queue_snapshot.json b/local_state/state/queue_snapshot.json
+index 1fdd92c..c4114e5 100644
+--- a/local_state/state/queue_snapshot.json
++++ b/local_state/state/queue_snapshot.json
+@@ -1,6 +1,6 @@
+ {
+-  "ts": "2026-03-24T13:17:00.089414+00:00",
+-  "reason": "startup",
++  "ts": "2026-03-24T13:18:12.985357+00:00",
++  "reason": "main_loop",
+   "pending_count": 0,
+   "running_count": 0,
+   "pending": [],
+diff --git a/local_state/state/state.json b/local_state/state/state.json
+index bfcf7a9..29d518c 100644
+--- a/local_state/state/state.json
++++ b/local_state/state/state.json
+@@ -4,9 +4,9 @@
+   "owner_chat_id": 1262547540,
+   "tg_offset": 658045649,
+   "spent_usd": 0.0,
+-  "spent_calls": 0,
+-  "spent_tokens_prompt": 0,
+-  "spent_tokens_completion": 0,
++  "spent_calls": 5,
++  "spent_tokens_prompt": 73909,
++  "spent_tokens_completion": 314,
+   "spent_tokens_cached": 0,
+   "session_id": "373a82a6ae2f4b36b42e8f4efb014519",
+   "current_branch": "ouroboros",
+@@ -16,12 +16,12 @@
+   "budget_messages_since_report": 1,
+   "evolution_mode_enabled": false,
+   "evolution_cycle": 0,
+-  "session_total_snapshot": 7.041616125,
++  "session_total_snapshot": 7.5589583,
+   "session_spent_snapshot": 0.0,
+   "budget_drift_pct": null,
+   "budget_drift_alert": false,
+   "evolution_consecutive_failures": 0,
+-  "openrouter_total_usd": 7.041616125,
+-  "openrouter_daily_usd": 3.13429375,
+-  "openrouter_last_check_at": "2026-03-24T12:31:25.748326+00:00"
++  "openrouter_total_usd": 7.5589583,
++  "openrouter_daily_usd": 3.651635925,
++  "openrouter_last_check_at": "2026-03-24T13:18:17.731662+00:00"
+ }
+\ No newline at end of file
+diff --git a/local_state/state/state.last_good.json b/local_state/state/state.last_good.json
+index bfcf7a9..29d518c 100644
+--- a/local_state/state/state.last_good.json
++++ b/local_state/state/state.last_good.json
+@@ -4,9 +4,9 @@
+   "owner_chat_id": 1262547540,
+   "tg_offset": 658045649,
+   "spent_usd": 0.0,
+-  "spent_calls": 0,
+-  "spent_tokens_prompt": 0,
+-  "spent_tokens_completion": 0,
++  "spent_calls": 5,
++  "spent_tokens_prompt": 73909,
++  "spent_tokens_completion": 314,
+   "spent_tokens_cached": 0,
+   "session_id": "373a82a6ae2f4b36b42e8f4efb014519",
+   "current_branch": "ouroboros",
+@@ -16,12 +16,12 @@
+   "budget_messages_since_report": 1,
+   "evolution_mode_enabled": false,
+   "evolution_cycle": 0,
+-  "session_total_snapshot": 7.041616125,
++  "session_total_snapshot": 7.5589583,
+   "session_spent_snapshot": 0.0,
+   "budget_drift_pct": null,
+   "budget_drift_alert": false,
+   "evolution_consecutive_failures": 0,
+-  "openrouter_total_usd": 7.041616125,
+-  "openrouter_daily_usd": 3.13429375,
+-  "openrouter_last_check_at": "2026-03-24T12:31:25.748326+00:00"
++  "openrouter_total_usd": 7.5589583,
++  "openrouter_daily_usd": 3.651635925,
++  "openrouter_last_check_at": "2026-03-24T13:18:17.731662+00:00"
+ }
+\ No newline at end of file

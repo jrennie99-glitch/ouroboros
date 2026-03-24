@@ -1,0 +1,1 @@
+e598edd auto-rescue: uncommitted changes detected on startup

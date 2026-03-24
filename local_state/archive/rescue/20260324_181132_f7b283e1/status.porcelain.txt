@@ -1,0 +1,24 @@
+M local_state/logs/chat.jsonl
+ M local_state/logs/events.jsonl
+ M local_state/logs/supervisor.jsonl
+ M local_state/state/queue_snapshot.json
+ M local_state/state/state.json
+ M local_state/state/state.last_good.json
+?? local_state/analysis/
+?? local_state/archive/rescue/20260324_123643_b6ccca64/
+?? local_state/archive/rescue/20260324_124231_46c7d792/
+?? local_state/archive/rescue/20260324_124327_7a605041/
+?? local_state/archive/rescue/20260324_124542_923835e7/
+?? local_state/archive/rescue/20260324_125239_947af639/
+?? local_state/archive/rescue/20260324_130305_1a12ab4b/
+?? local_state/archive/rescue/20260324_130903_03a66603/
+?? local_state/archive/rescue/20260324_131659_2cb03593/
+?? local_state/archive/rescue/20260324_131819_d72c8754/
+?? local_state/archive/rescue/20260324_132356_609ec196/
+?? local_state/archive/rescue/20260324_132446_57406c67/
+?? local_state/archive/rescue/20260324_133815_988ad1d0/
+?? local_state/archive/rescue/20260324_134213_8ade1a06/
+?? local_state/logs/progress.jsonl
+?? local_state/logs/tools.jsonl
+?? local_state/memory/
+?? local_state/task_results/
