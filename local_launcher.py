@@ -509,12 +509,15 @@ _last_diag_heartbeat_ts = 0.0
 _last_message_ts: float = time.time()
 _ACTIVE_MODE_SEC: int = 300
 
-# Auto-start background consciousness
-try:
-    _consciousness.start()
-    log.info("Background consciousness auto-started")
-except Exception as e:
-    log.warning("consciousness auto-start failed: %s", e)
+# Auto-start background consciousness (unless disabled)
+if os.environ.get("OUROBOROS_DISABLE_BG") != "1":
+    try:
+        _consciousness.start()
+        log.info("Background consciousness auto-started")
+    except Exception as e:
+        log.warning("consciousness auto-start failed: %s", e)
+else:
+    log.info("Background consciousness DISABLED (OUROBOROS_DISABLE_BG=1)")
 
 print(f"\n{'='*60}")
 print(f"  Ouroboros LOCAL launcher running")
