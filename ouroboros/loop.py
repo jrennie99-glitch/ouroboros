@@ -637,9 +637,9 @@ def run_llm_loop(
     # Dedup set for per-task owner messages from Drive mailbox
     _owner_msg_seen: set = set()
     try:
-        MAX_ROUNDS = max(1, int(os.environ.get("OUROBOROS_MAX_ROUNDS", "200")))
+        MAX_ROUNDS = max(1, int(os.environ.get("OUROBOROS_MAX_ROUNDS", "15")))
     except (ValueError, TypeError):
-        MAX_ROUNDS = 200
+        MAX_ROUNDS = 15
         log.warning("Invalid OUROBOROS_MAX_ROUNDS, defaulting to 200")
     round_idx = 0
     try:
