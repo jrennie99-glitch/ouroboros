@@ -15,5 +15,13 @@ COPY . .
 # Create local_state directory
 RUN mkdir -p local_state/logs local_state/state local_state/memory
 
-# Run the local launcher
+# Set repo identity for the launcher
+ENV GITHUB_USER=AR-DYNAMICS
+ENV GITHUB_REPO=ouroboros-new
+ENV OUROBOROS_MAX_ROUNDS=15
+
+# Init git repo so launcher doesn't crash
+RUN git init && git add -A && git commit -m "docker init" 2>/dev/null || true
+
+# Run the colab launcher (designed for headless servers)
 CMD ["python", "local_launcher.py"]
