@@ -172,7 +172,15 @@ if __name__ == "__main__":
 
 
 def install():
-    """Install apply_patch script to /usr/local/bin/."""
-    APPLY_PATCH_PATH.parent.mkdir(parents=True, exist_ok=True)
-    APPLY_PATCH_PATH.write_text(APPLY_PATCH_CODE, encoding="utf-8")
-    APPLY_PATCH_PATH.chmod(0o755)
+    """Install apply_patch script. Falls back to ~/.local/bin if /usr/local/bin is not writable."""
+    global APPLY_PATCH_PATH
+    try:
+        APPLY_PATCH_PATH.parent.mkdir(parents=True, exist_ok=True)
+        APPLY_PATCH_PATH.write_text(APPLY_PATCH_CODE, encoding="utf-8")
+        APPLY_PATCH_PATH.chmod(0o755)
+    except PermissionError:
+        fallback = pathlib.Path.home() / ".local" / "bin" / "apply_patch"
+        fallback.parent.mkdir(parents=True, exist_ok=True)
+        fallback.write_text(APPLY_PATCH_CODE, encoding="utf-8")
+        fallback.chmod(0o755)
+        APPLY_PATCH_PATH = fallback
