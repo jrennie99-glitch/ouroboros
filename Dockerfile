@@ -20,8 +20,11 @@ ENV GITHUB_USER=AR-DYNAMICS
 ENV GITHUB_REPO=ouroboros-new
 ENV OUROBOROS_MAX_ROUNDS=15
 
-# Init git repo so launcher doesn't crash
-RUN git init && git add -A && git commit -m "docker init" 2>/dev/null || true
+# Init git repo with proper remote so launcher doesn't crash
+RUN git init && \
+    git remote add origin https://github.com/AR-DYNAMICS/ouroboros-new.git && \
+    git add -A && \
+    git commit -m "docker init" 2>/dev/null || true
 
 # Run the colab launcher (designed for headless servers)
 CMD ["python", "local_launcher.py"]
