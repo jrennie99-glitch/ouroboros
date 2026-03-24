@@ -6,6 +6,8 @@ Defensive security, vulnerability scanning, security audits.
 
 from __future__ import annotations
 import logging
+
+from ouroboros.tools._adapter import adapt_tools
 import json
 import subprocess
 from typing import Any, Dict, List
@@ -103,7 +105,7 @@ def code_audit(path: str) -> Dict[str, Any]:
     return results
 
 
-def get_tools() -> list:
+def _raw_tools() -> list:
     return [
         {
             "name": "security_scan",
@@ -144,3 +146,7 @@ def get_tools() -> list:
             "function": code_audit,
         },
     ]
+
+
+def get_tools():
+    return adapt_tools(_raw_tools())

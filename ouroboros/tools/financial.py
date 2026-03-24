@@ -7,6 +7,8 @@ Principle 9: Financial Agency.
 
 from __future__ import annotations
 import logging
+
+from ouroboros.tools._adapter import adapt_tools
 import json
 import os
 import subprocess
@@ -172,7 +174,7 @@ def revenue_scan(business_type: str = "digital") -> Dict[str, Any]:
     }
 
 
-def get_tools() -> list:
+def _raw_tools() -> list:
     return [
         {
             "name": "crypto_price",
@@ -238,3 +240,7 @@ def get_tools() -> list:
             "function": revenue_scan,
         },
     ]
+
+
+def get_tools():
+    return adapt_tools(_raw_tools())

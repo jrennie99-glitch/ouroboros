@@ -6,6 +6,8 @@ Supreme content engine for all media types.
 
 from __future__ import annotations
 import logging
+
+from ouroboros.tools._adapter import adapt_tools
 import json
 import os
 import subprocess
@@ -212,7 +214,7 @@ def generate_leads(industry: str, criteria: str = "", count: int = 10,
     return strategy
 
 
-def get_tools() -> list:
+def _raw_tools() -> list:
     return [
         {
             "name": "create_content",
@@ -277,3 +279,7 @@ def get_tools() -> list:
             "function": generate_leads,
         },
     ]
+
+
+def get_tools():
+    return adapt_tools(_raw_tools())

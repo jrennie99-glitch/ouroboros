@@ -7,6 +7,8 @@ Uses edge-tts for text-to-speech (free, human-quality voices).
 
 from __future__ import annotations
 import logging
+
+from ouroboros.tools._adapter import adapt_tools
 import os
 import subprocess
 import tempfile
@@ -146,7 +148,7 @@ def transcribe_voice(file_id: str = "", file_path: str = "") -> Dict[str, Any]:
         return {"error": str(e), "status": "failed"}
 
 
-def get_tools() -> list:
+def _raw_tools() -> list:
     return [
         {
             "name": "text_to_voice",
@@ -176,3 +178,7 @@ def get_tools() -> list:
             "function": transcribe_voice,
         },
     ]
+
+
+def get_tools():
+    return adapt_tools(_raw_tools())

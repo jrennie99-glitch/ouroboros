@@ -10,6 +10,8 @@ They think like Ouroboros, act like Ouroboros, ARE Ouroboros.
 
 from __future__ import annotations
 import logging
+
+from ouroboros.tools._adapter import adapt_tools
 import json
 import os
 import threading
@@ -271,7 +273,7 @@ def swarm_scale(target: int) -> Dict[str, Any]:
 # Tool Registry
 # ---------------------------------------------------------------------------
 
-def get_tools() -> list:
+def _raw_tools() -> list:
     return [
         {
             "name": "swarm_spawn",
@@ -370,3 +372,7 @@ def get_tools() -> list:
             "function": swarm_scale,
         },
     ]
+
+
+def get_tools():
+    return adapt_tools(_raw_tools())
