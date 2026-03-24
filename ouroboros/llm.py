@@ -320,7 +320,7 @@ class LLMClient:
         self,
         prompt: str,
         images: List[Dict[str, Any]],
-        model: str = "anthropic/claude-sonnet-4.6",
+        model: str = "google/gemini-2.0-flash-lite-001",
         max_tokens: int = 1024,
         reasoning_effort: str = "low",
     ) -> Tuple[str, Dict[str, Any]]:
@@ -369,11 +369,11 @@ class LLMClient:
 
     def default_model(self) -> str:
         """Return the single default model from env. LLM switches via tool if needed."""
-        return os.environ.get("OUROBOROS_MODEL", "anthropic/claude-sonnet-4.6")
+        return os.environ.get("OUROBOROS_MODEL", "google/gemini-2.0-flash-lite-001")
 
     def available_models(self) -> List[str]:
         """Return list of available models from env (for switch_model tool schema)."""
-        main = os.environ.get("OUROBOROS_MODEL", "anthropic/claude-sonnet-4.6")
+        main = os.environ.get("OUROBOROS_MODEL", "google/gemini-2.0-flash-lite-001")
         code = os.environ.get("OUROBOROS_MODEL_CODE", "")
         light = os.environ.get("OUROBOROS_MODEL_LIGHT", "")
         models = [main]
