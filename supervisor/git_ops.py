@@ -67,9 +67,9 @@ def ensure_repo_present() -> None:
     if rc != 0:
         subprocess.run(["git", "remote", "add", "origin", REMOTE_URL],
                         cwd=str(REPO_DIR), capture_output=True)
-    subprocess.run(["git", "config", "user.name", "Ouroboros"], cwd=str(REPO_DIR), check=True)
+    subprocess.run(["git", "config", "user.name", "Ouroboros"], cwd=str(REPO_DIR), capture_output=True)
     subprocess.run(["git", "config", "user.email", "ouroboros@users.noreply.github.com"],
-                    cwd=str(REPO_DIR), check=True)
+                    cwd=str(REPO_DIR), capture_output=True)
     # Fetch is optional — may fail without token for private repos
     subprocess.run(["git", "fetch", "origin"], cwd=str(REPO_DIR), capture_output=True)
 

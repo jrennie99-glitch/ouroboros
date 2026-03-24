@@ -32,7 +32,7 @@ if _env_path.exists():
 if __name__ == "__main__":
     subprocess.run(
         [sys.executable, "-m", "pip", "install", "-q", "openai>=1.0.0", "requests"],
-        check=True,
+        capture_output=True,
     )
 
 def ensure_claude_code_cli() -> bool:
