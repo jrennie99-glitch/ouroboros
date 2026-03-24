@@ -16,10 +16,12 @@ log = logging.getLogger(__name__)
 
 DEFAULT_LIGHT_MODEL = "nvidia/nemotron-3-super-120b-a12b:free"
 
-# Free fallback models for rate limit auto-switching
+# Free fallback models for rate limit auto-switching (ordered by quality)
 FREE_FALLBACK_MODELS = [
-    "meta-llama/llama-3.3-70b-instruct:free",
     "qwen/qwen3-235b-a22b:free",
+    "nvidia/nemotron-3-nano-30b-a3b:free",
+    "meta-llama/llama-3.3-70b-instruct:free",
+    "nvidia/nemotron-nano-9b-v2:free",
     "google/gemma-3-27b-it:free",
     "mistralai/mistral-small-3.1-24b-instruct:free",
 ]
