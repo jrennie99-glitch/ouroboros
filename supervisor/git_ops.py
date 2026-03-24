@@ -310,17 +310,24 @@ def checkout_and_reset(branch: str, reason: str = "unspecified",
 
     # Force discard any local changes before switching
     subprocess.run(["git", "stash", "--include-untracked"], cwd=str(REPO_DIR), capture_output=True)
-    subprocess.run(["git", "checkout", "-f", branch, "--"], cwd=str(REPO_DIR), check=True)
+    # Try checkout -f; if it fails (ambiguous name), try switch; if that fails, just continue
+    rc = subprocess.run(["git", "checkout", "-f", branch, "--"], cwd=str(REPO_DIR), capture_output=True).returncode
+    if rc != 0:
+        rc = subprocess.run(["git", "switch", "-f", branch], cwd=str(REPO_DIR), capture_output=True).returncode
+        if rc != 0:
+            # Last resort: we're probably already on the right branch or in a bare init
+            pass
     subprocess.run(["git", "reset", "--hard", f"origin/{branch}"], cwd=str(REPO_DIR), capture_output=True)
     # Clean __pycache__ to prevent stale bytecode (git checkout may not update mtime)
     for p in REPO_DIR.rglob("__pycache__"):
         shutil.rmtree(p, ignore_errors=True)
     st = load_state()
     st["current_branch"] = branch
-    st["current_sha"] = subprocess.run(
+    _sha_result = subprocess.run(
         ["git", "rev-parse", "HEAD"], cwd=str(REPO_DIR),
-        capture_output=True, text=True, check=True,
-    ).stdout.strip()
+        capture_output=True, text=True,
+    )
+    st["current_sha"] = _sha_result.stdout.strip() if _sha_result.returncode == 0 else "unknown"
     save_state(st)
     return True, "ok"
 

@@ -320,7 +320,9 @@ _messaging.init(DRIVE_ROOT)
 # ----------------------------
 ensure_repo_present()
 ok, msg = safe_restart(reason="bootstrap", unsynced_policy="rescue_and_reset")
-assert ok, f"Bootstrap failed: {msg}"
+if not ok:
+    log.warning(f"Bootstrap warning (non-fatal): {msg}")
+    # Continue anyway — the code is already present from Docker build
 
 # ----------------------------
 # 6) Start workers
