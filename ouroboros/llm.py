@@ -16,13 +16,20 @@ log = logging.getLogger(__name__)
 
 DEFAULT_LIGHT_MODEL = "meta-llama/llama-3.3-70b-instruct:free"
 
-# Free fallback models for rate limit auto-switching (ordered by size/quality)
-FREE_FALLBACK_MODELS = [
+# ---------------------------------------------------------------------------
+# Smart Rate Limit Router
+# Strategy: cycle through ALL free models first. If ALL are rate limited,
+# fall back to ultra-cheap paid models (~$0.0005/message = 2000 msgs per $1).
+# ---------------------------------------------------------------------------
+
+# All 21 free models on OpenRouter (ordered by quality/size)
+FREE_MODELS = [
+    "nvidia/nemotron-3-super-120b-a12b:free",
     "nousresearch/hermes-3-llama-3.1-405b:free",
-    "openai/gpt-oss-120b:free",
-    "arcee-ai/trinity-large-preview:free",
     "qwen/qwen3-next-80b-a3b-instruct:free",
     "meta-llama/llama-3.3-70b-instruct:free",
+    "openai/gpt-oss-120b:free",
+    "arcee-ai/trinity-large-preview:free",
     "nvidia/nemotron-3-nano-30b-a3b:free",
     "minimax/minimax-m2.5:free",
     "stepfun/step-3.5-flash:free",
@@ -38,8 +45,23 @@ FREE_FALLBACK_MODELS = [
     "cognitivecomputations/dolphin-mistral-24b-venice-edition:free",
     "google/gemma-3-4b-it:free",
     "qwen/qwen3-4b:free",
-    "meta-llama/llama-3.2-3b-instruct:free",
 ]
+
+# Ultra-cheap paid fallbacks (~$0.0005-0.0007 per message)
+# Only used when ALL free models are rate limited
+PAID_FALLBACK_MODELS = [
+    "google/gemini-2.0-flash-lite-001",     # $0.0007/msg, 1M ctx, very fast
+    "qwen/qwen3-235b-a22b-2507",            # $0.0005/msg, 235B, smartest cheap
+    "mistralai/mistral-small-3.2-24b-instruct",  # $0.0006/msg, fast
+    "amazon/nova-lite-v1",                   # $0.0005/msg, 300K ctx
+]
+
+# Combined: free first, then cheap paid
+FREE_FALLBACK_MODELS = FREE_MODELS  # backward compat
+
+# Rate limit tracking
+_rate_limit_tracker: Dict[str, float] = {}  # model -> timestamp when rate limited
+_RATE_LIMIT_COOLDOWN = 60  # seconds before retrying a rate-limited model
 
 
 def normalize_reasoning_effort(value: str, default: str = "medium") -> str:
@@ -219,13 +241,26 @@ class LLMClient:
             kwargs["tools"] = tools_with_cache
             kwargs["tool_choice"] = tool_choice
 
-        # Rate limit auto-fallback: try main model, then ALL free models on 429/404
+        # Smart Rate Limit Router:
+        # 1. Try requested model
+        # 2. Skip models we know are rate limited (cooldown tracker)
+        # 3. Cycle through ALL 21 free models
+        # 4. If ALL free models fail, use ultra-cheap paid fallback
         original_model = kwargs["model"]
+        now = time.time()
+
+        # Build model list: requested -> free (skip recently limited) -> paid
         models_to_try = [original_model]
-        # Always add all free fallbacks (skip duplicates)
-        for fm in FREE_FALLBACK_MODELS:
+        for fm in FREE_MODELS:
             if fm != original_model:
+                # Skip if rate limited recently
+                if fm in _rate_limit_tracker and (now - _rate_limit_tracker[fm]) < _RATE_LIMIT_COOLDOWN:
+                    continue
                 models_to_try.append(fm)
+        # Add paid fallbacks at the end
+        for pm in PAID_FALLBACK_MODELS:
+            if pm != original_model:
+                models_to_try.append(pm)
 
         last_error = None
         for try_model in models_to_try:
@@ -233,17 +268,20 @@ class LLMClient:
             try:
                 resp = client.chat.completions.create(**kwargs)
                 if try_model != original_model:
-                    log.info(f"Rate limit fallback: {original_model} -> {try_model}")
+                    is_paid = try_model in PAID_FALLBACK_MODELS
+                    label = "PAID" if is_paid else "FREE"
+                    log.info(f"Rate limit router: {original_model} -> {try_model} [{label}]")
                 break
             except Exception as e:
                 err_str = str(e)
                 if "429" in err_str or "rate" in err_str.lower() or "404" in err_str or "not found" in err_str.lower():
-                    log.warning(f"Rate limited/unavailable on {try_model}, trying next...")
+                    _rate_limit_tracker[try_model] = now  # remember this model is limited
+                    log.warning(f"Rate limited/unavailable: {try_model}, trying next...")
                     last_error = e
                     continue
                 raise
         else:
-            raise last_error or RuntimeError("All models rate limited")
+            raise last_error or RuntimeError("All models exhausted (21 free + 4 paid)")
 
         resp_dict = resp.model_dump()
         usage = resp_dict.get("usage") or {}
