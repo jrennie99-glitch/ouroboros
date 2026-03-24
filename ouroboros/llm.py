@@ -14,7 +14,7 @@ from typing import Any, Dict, List, Optional, Tuple
 
 log = logging.getLogger(__name__)
 
-DEFAULT_LIGHT_MODEL = "anthropic/claude-sonnet-4"
+DEFAULT_LIGHT_MODEL = "nvidia/llama-3.1-nemotron-70b-instruct:free"
 
 # Free fallback models for rate limit auto-switching
 FREE_FALLBACK_MODELS = [
