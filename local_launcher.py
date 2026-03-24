@@ -194,9 +194,14 @@ GITHUB_REPO = get_cfg("GITHUB_REPO", default="ouroboros")
 assert GITHUB_USER and str(GITHUB_USER).strip(), "GITHUB_USER not set. Add it to .env file."
 assert GITHUB_REPO and str(GITHUB_REPO).strip(), "GITHUB_REPO not set. Add it to .env file."
 MAX_WORKERS = int(get_cfg("OUROBOROS_MAX_WORKERS", default="2") or "2")
-MODEL_MAIN = get_cfg("OUROBOROS_MODEL", default="google/gemini-2.0-flash-lite-001")
-MODEL_CODE = get_cfg("OUROBOROS_MODEL_CODE", default="google/gemini-2.0-flash-lite-001")
-MODEL_LIGHT = get_cfg("OUROBOROS_MODEL_LIGHT", default="google/gemini-2.0-flash-lite-001")
+_SAFE_MODEL = "google/gemini-2.0-flash-lite-001"
+_BAD_MODELS = {"google/gemini-2.0-flash-exp:free", "anthropic/claude-sonnet-4.6", ""}
+def _validate_model(val, fallback=_SAFE_MODEL):
+    return fallback if (not val or val.strip() in _BAD_MODELS) else val.strip()
+
+MODEL_MAIN = _validate_model(get_cfg("OUROBOROS_MODEL", default=_SAFE_MODEL))
+MODEL_CODE = _validate_model(get_cfg("OUROBOROS_MODEL_CODE", default=_SAFE_MODEL))
+MODEL_LIGHT = _validate_model(get_cfg("OUROBOROS_MODEL_LIGHT", default=_SAFE_MODEL))
 
 BUDGET_REPORT_EVERY_MESSAGES = 10
 SOFT_TIMEOUT_SEC = max(60, int(get_cfg("OUROBOROS_SOFT_TIMEOUT_SEC", default="600") or "600"))
