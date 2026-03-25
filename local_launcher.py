@@ -600,7 +600,11 @@ while True:
             voice_file_id = msg["voice"].get("file_id")
             if voice_file_id:
                 _is_voice_msg = True
-                voice_bytes = TG.download_file_bytes(voice_file_id)
+                try:
+                    voice_b64 = TG.download_file_base64(voice_file_id)
+                    voice_bytes = __import__('base64').b64decode(voice_b64) if voice_b64 else None
+                except Exception:
+                    voice_bytes = None
                 if voice_bytes:
                     transcribed = transcribe_voice(voice_bytes)
                     if transcribed:
